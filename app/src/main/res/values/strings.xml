@@ -1,0 +1,908 @@
+<resources>
+
+    //Google map key
+    <string name="google_maps_key">PLACE_YOUR_MAPS_KEY</string>
+
+    //Google map key
+
+    // Authorization key
+    <string name="authorization_key">AUTH_KEY</string>
+    // Authorization key
+
+
+    <string name="app_name">Notary-App®</string>
+    <string name="app_name1">Notary-App®</string>
+    <string name="app_title">Notaries Evolved</string>
+    <string name="app_version">v.1.0</string>
+
+    <string name="app_logo">logo</string>
+    <string name="app_background">app background</string>
+
+    <string name="signInFragmentSignIn">Sign In</string>
+    <string name="sign_in">Notary Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password </string>
+    <string name="forgotPassword"><u>Forgot Password?</u></string>
+    <string name="don_t_have_an_account">New Notary Registration</string>
+    <string name="welcome_to_notaryapp_notary">Welcome to \nNotary-App®</string>
+    <string name="account_setup">Let’s start by getting your account setup.</string>
+    <string name="registration_process">To start the registration process, please click the link in your email or enter the confirmation code below.</string>
+
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="regemail">Email</string>
+    <string name="confirmEmail">Confirm Email</string>
+    <string name="Confirmpassword">Confirm Password</string>
+    <string name="hintfirstName"><font size="15">Enter First Name</font></string>
+    >
+    <string name="hintlastName"><font size="15">Enter Last Name</font></string>
+    <string name="hintphoneNumber"><font size="15">Enter PhoneNumber</font></string>
+    <string name="hintemail"><font size="15">Enter Email</font></string>
+    <string name="submit">SUBMIT</string>
+
+    <string name="enterwd">Enter Password</string>
+    <string name="reenter">Re_Enter Password</string>
+
+    //OTP
+    <string name="otpSent">OTP SENT !</string>
+    <string name="otpSentto">We have sent a One Time Password (OTP) to your registered phone and email.</string>
+    <string name="verifyuraccount">VERIFY YOUR ACCOUNT</string>
+    <string name="resendlink">Resend OTP</string>
+    <string name="changeemail">Change email “name@email.com”</string>
+    <string name="continueotp">Continue</string>
+    <string name="regmail">name@gmail.com</string>
+
+    <string name="passwordTooltip">Password should include 1 Capital letter, 1 Small letter,1 Special character and 1 Number and Minimum 8</string>
+
+    <string name="text_ok">OK</string>
+    <string name="note">Note:</string>
+    <string name="doc_required">Documents Required</string>
+    <string name="card_text_one">Government issued ID (Driver’s License or Passport)</string>
+    <string name="card_text_two">Notary Commission Number</string>
+    <string name="card_text_three">Your Notary Seal and a White Piece of Paper</string>
+    <string name="access_text">Notary-App® needs to access certain features on your phone.</string>
+    <string name="allow_access">Allow Access</string>
+    <string name="camera_string">Camera for verifying identity &amp; documents</string>
+    <string name="mic_string">Mic for verifying you by voice comparison</string>
+    <string name="msg__string">SMS for 2-factor security &amp; password recovery</string>
+    <string name="location_string">Location services to protect you from ID theft</string>
+    <string name="permission_head">What You Will Need to Register</string>
+    <string name="permission_sub_head">You will need the following items to complete the registration process.</string>
+    <string name="textHead">STEP 1/2 \nVERIFY YOUR IDENTITY</string>
+    <string name="textHeadCamera">STEP 1/2 \nSETUP YOUR PROFILE</string>
+    <string name="textHeadValidate">VERIFY AN ID</string>
+    <string name="text_sub_head">To protect against fraud, please have your government issued ID ready to begin the process.</string>
+    <string name="textid">Select Your ID Type</string>
+    <string name="acceptance_note">Note: By registering to Notary-App®, you are accepting the <u>Terms of Service</u>.</string>
+    <string name="start">Start</string>
+
+    <string name="driver_license_text_front">Please take a photo of <b> the <u>front</u> of your Driver\’s License </b></string>
+    <string name="driver_license_text_back">Please take a photo of <b> the <u>back</u> of your Driver\’s License </b></string>
+    <string name="passport_text">Please take a photo of your<b> Passport </b></string>
+    <string name="nic_text">Please take a photo of your <b> NIC(State ID) </b></string>
+    <string name="workpermit_text">Please take a photo of your <b> Work Permit </b></string>
+    <string name="passport_card_text">Please take a photo of your <b>Passport Card</b></string>
+    <string name="residence_text">Please take a photo of your <b>Residence Permit</b></string>
+    <string name="visa_text">Please take a photo of your<b> VISA </b></string>
+    <string name="selfie_text"> Lets\ ’s capture an <u>image of your face</u> to ensure no one is trying to steal your identity. Align your face below and take a photo</string>
+
+    <string name="driver_license_text">Please take a photo of <b> \nthe <u>front</u> of your Driver\ ’s License </b></string>
+    <string name="add_docs_camera_sub_text">Please take a photo of each of the\n<b>  <u>Seal and Signature</u></b> pages.</string>
+    <string name="camera_note">“Notary-App®” Would \nLike to Access the Camera</string>
+    <string name="camera_note_sub_head">This let’s you take photos, videos and \ncapture images of documents</string>
+    <string name="dont_allow">Don\'t Allow</string>
+    <string name="allow">Allow</string>
+    <string name="cancel">Cancel</string>
+    <string name="alert">Alert</string>
+
+    <string name="be_patient">Please <b> Be Patient as We Verify Your Identity.</b>On rare occasions, this may take up to two minutes to complete." </string>
+    <string name="verify">VERIFY YOUR IDENTITY</string>
+    <string name="contact_details">Please contact Notary-App® Data Solutions, Inc. \nat (222) 222–2222.</string>
+    <string name="retry">Retry</string>
+    <string name="abort">Abort</string>
+    <string name="profile_head">Please Review and Complete Your Profile Information</string>
+    <string name="update_profile_photo">Update \nProfile Photo</string>
+    <string name="congrats_text">Congratulations, you have successfully completed the Notary-App® registration process.</string>
+    <string name="profile_id">www.notaryappdate.com/profile/\njohnsmithDKCP2918</string>
+    <string name="success_msg">We have created a profile page for you on our website. It will not go live until you claim it.</string>
+    <string name="please_contact">Please contact Notary-App® Data Solutions, Inc. \nat (222) 222–222</string>
+    <string name="viewprofile"><u>VIEW YOUR PROFILE</u></string>
+
+    <string name="use_another_id">USE ANOTHER ID</string>
+    <string name="verification_failed">VERIFICATION FAILED</string>
+    <string name="caution">CAUTION!</string>
+    <string name="call_support">CALL SUPPORT</string>
+
+    <string name="success">SUCCESS!!!</string>
+    <string name="id_validate">ID VALIDATED</string>
+    <string name="verifyok">OK</string>
+
+    <string name="license_page_head">ADD COMMISSION NUMBER</string>
+    <string name="license_page_sub">Enter Your Notary Commission Number.</string>
+    <string name="add_address">Add The address associated with this commission number.</string>
+    <string name="step2">STEP 2/2 \nVERIFY YOUR IDENTITY</string>
+    <string name="add_stamp">ADD YOUR SEAL</string>
+    <string name="stamp_add_sub_head">Notary-App® helps protect your seal from forgery.</string>
+    <string name="capturing_stamp">Capturing Your Seal?</string>
+    <string name="ensure_text">Ensure you are in a well-lit area. Press your stamp on a white sheet of paper until you produce a clean representation of your seal.</string>
+
+    <string name="profile">Profile</string>
+    <string name="company">Company</string>
+    <string name="address">Address</string>
+    <string name="addressline1">Address Line 1 </string>
+    <string name="addressline2">Address Line 2</string>
+    <string name="state">State </string>
+    <string name="city">City </string>
+
+    <string name="license_num">Commission Number </string>
+    <string name="add_license_num"> Add Your Commission Number</string>
+    <string name="license_state">Commission State (*)</string>
+    <string name="add_another_license_num">Add Another License Number</string>
+
+    <string name="pledge">NOTARY PLEDGE</string>
+    <string name="pledge_com">Complete Your Pledge</string>
+    <string name="pledge_completing">Completing Your Pledge</string>
+    <string name="pledge_com_long">By completing this pledge you are agreeing that oath is a promise to a deity and an affirmation is a pledge on ones
+personal honor. Both are legally binding promises to tell the truth and subject the oath-taker or affirmant to penalities
+for perjury.</string>
+
+    <string name="notery_take_photo">Please take a picture of <u>your Notary Seal</u> on a piece of plain white paper</string>
+    <string name="pledge_record">By clicking continue, I declare under the penalty of perjury that my name is Xxxx Xxxx and my Notary Commission number is xxxxxxx.</string>
+
+    <string name="pro_header">STEP 2/2 \nSET UP YOUR PFOFILE</string>
+
+
+    <string name="reset">Reset</string>
+    <string name="switch_camera">Switch</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Start</string>
+    <string name="done">Stop</string>
+    <string name="video_path">Video path:</string>
+    <string name="video_too_short">Video is too short.</string>E
+    <string name="initiating">Initiating…</string>
+    <string name="processing">Processing…</string>
+    <string name="please_wait">Please wait</string>
+    <string name="permissions_denied_exit">Permissions denied, exit.</string>
+
+    <string name="changepwd">CHANGE YOUR PASSWORD</string>
+    <string name="enteremail">Enter Your Email</string>
+    <string name="forgotemailinfo">Please enter the email address that you used during registration</string>
+    <string name="emailpwd">EMAIL</string>
+    <string name="pwd">PASSWORD</string>
+    <string name="updatepwd">PASSWORD \nUPDATED \nSUCCESSFULLY</string>
+    <string name="continuelogin">CONTINUE LOGIN</string>
+    <string name="continu">CONTINUE</string>
+    <string name="login">LOGIN</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_transaction">TransactionLog</string>
+
+    <string name="menu_feature">Premium Features</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_help">Help FAQ</string>
+    <string name="menu_contact">Contact US</string>
+    <string name="menu_settngs">Settings</string>
+    <string name="menu_logout">Logout</string>
+    <string name="notaryapp">Notary-App®</string>
+    <string name="_6_days">30 Day</string>
+    <string name="networkMain">NETWORK ERROR!!!</string>
+    <string name="networkerror">Please check your internet connection and try again.</string>
+    <string name="networkerror1">Server side connection error. Please try again after some time.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_the_id">Select the type of ID you will verify \nwith Notary-App®</string>
+
+
+    <string name="start_verification">START VERIFICATION</string>
+    <string name="verify_with">Verify with: </string>
+    <string name="now_that_you">Now that you\'re registered start by notarizing your first document or validate an ID.</string>
+    <string name="let_s_get_started">LET\'S GET STARTED</string>
+    <string name="great">GREAT!</string>
+    <string name="addlicense">Your Notary License has been added. Proceed with adding another Notary License?</string>
+    <string name="notary_pledge1">I declare under penalty of perjury under the laws of my state that the information I have entered during the registration process is true and correct to the best of my knowledge</string>
+
+
+    <string name="notary_pledge2"> and my notary commission number is</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="private_policy">Privacy Policy</string>
+
+    <string name="terms_desc">
+        Last updated: November 18, 2019\n
+        Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using The Notary-App® Notary App mobile application (the "Service") operated by Notary-App® Data Solutions, Inc. ("us", "we", or "our").\n
+        Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.\n
+        By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you do not have permission to access the Service.\n
+    </string>
+    <string name="purchases">1. Purchases</string>
+    <string name="purchase_desc">
+        If you wish to purchase any product or service made available through the Service ("Purchase"), you may be asked to supply certain information relevant to your Purchase including, without limitation, your credit card number, the expiration date of your credit card, your billing address, and your shipping information.\n
+        You represent and warrant that: (i) you have the legal right to use any credit card(s) or other payment method(s) in connection with any Purchase; and that (ii) the information you supply to us is true, correct and complete.\n
+        The service may employ the use of third party services for the purpose of facilitating payment and the completion of Purchases. By submitting your information, you grant us the right to provide the information to these third parties subject to our Privacy Policy.\n
+        We reserve the right to refuse or cancel your order at any time for reasons including but not limited to: product or service availability, errors in the description or price of the product or service, error in your order or other reasons.\n
+        We reserve the right to refuse or cancel your order if fraud or an unauthorized or illegal transaction is suspected.
+    </string>
+    <string name="avail">2. Availability, Errors and Inaccuracies</string>
+    <string name="avail_desc">
+        We are constantly updating product and service offerings on the Service. We may experience delays in updating information on the Service and in our advertising on other web sites. The information found on the Service may contain errors or inaccuracies and may not be complete or current. Products or services may be mispriced, described inaccurately, or unavailable on the Service and we cannot guarantee the accuracy or completeness of any information found on the Service.\n
+        We therefore reserve the right to change or update information and to correct errors, inaccuracies, or omissions at any time without prior notice.\n
+    </string>
+    <string name="contests">3. Contests, Sweepstakes and Promotions</string>
+    <string name="contest_desc">
+        Any contests, sweepstakes or other promotions (collectively, "Promotions") made available through the Service may be governed by rules that are separate from these Terms Conditions. If you participate in any Promotions, please review The Notary-App® Notary Applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms and Conditions, the Promotion rules will apply.\n
+    </string>
+    <string name="subscriptions">4. Subscriptions</string>
+    <string name="subscriptions_desc">
+        Some parts of the Service are billed on a subscription basis ("Subscription(s)"). You will be billed in advance on a recurring and periodic basis ("Billing Cycle"). Billing cycles are set either on a monthly or annual basis, depending on the type of subscription plan you select when purchasing a Subscription.\n
+        At the end of each Billing Cycle, your Subscription will automatically renew under the exact same conditions unless you cancel it or Notary-App® Data Solutions, Inc. cancels it. You may cancel your Subscription renewal either through your online account management page or by contacting Notary-App® Data Solutions, Inc. customer support team.\n
+        A valid payment method, including credit card or PayPal, is required to process the payment for your Subscription. You shall provide Notary-App® Data Solutions, Inc. with accurate and complete billing information including full name, address, state, zip code, telephone number, and a valid payment method information. By submitting such payment information, you automatically authorize Notary-App® Data Solutions, Inc. to charge all Subscription fees incurred through your account to any such payment instruments.\n
+        Should automatic billing fail to occur for any reason, Notary-App® Data Solutions, Inc. will issue an electronic invoice indicating that you must proceed manually, within a certain deadline date, with the full payment corresponding to the billing period as indicated on the invoice.\n
+    </string>
+    <string name="free_trial">5. Free Trial</string>
+    <string name="free_trial_desc">
+        Notary-App® Data Solutions, Inc. may, at its sole discretion, offer a Subscription with a free trial for a limited period of time ("Free Trial").\n
+        You may be required to enter your billing information in order to sign up for the Free Trial.\n
+        If you do enter your billing information when signing up for the Free Trial, you will not be charged by Notary-App® Data Solutions, Inc. until the Free Trial has expired. On the last day of the Free Trial period, unless you cancelled your Subscription, you will be automatically charged The Notary-App® Notary Applicable Subscription fees for the type of Subscription you have selected.\n
+        At any time and without notice, Notary-App® Data Solutions, Inc. reserves the right to (i) modify the terms and conditions of the Free Trial offer, or (ii) cancel such Free Trial offer.\n
+    </string>
+    <string name="fee_changes">6. Fee Changes</string>
+    <string name="fee_changes_desc">
+        Notary-App® Data Solutions, Inc., in its sole discretion and at any time, may modify the Subscription fees for the Subscriptions. Any Subscription fee change will become effective at the end of the then-current Billing Cycle.\n
+        Notary-App® Data Solutions, Inc. will provide you with a reasonable prior notice of any change in Subscription fees to give you an opportunity to terminate your Subscription before such change becomes effective.\n
+        Your continued use of the Service after the Subscription fee change comes into effect constitutes your agreement to pay the modified Subscription fee amount.\n
+    </string>
+    <string name="refunds">7. Refunds</string>
+    <string name="refunds_desc">
+        Except when required by law, paid Subscription fees are non-refundable.
+    </string>
+    <string name="accounts">8. Accounts</string>
+    <string name="accounts_desc">
+        When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on the Service.\n
+        You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Service or a third-party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.\n
+        We reserve the right to refuse service, terminate accounts, remove or edit content, or cancel orders in our sole discretion.\n
+    </string>
+    <string name="intellectual_property">9. Intellectual Property</string>
+    <string name="intellectual_desc">
+        The Service and its original content, features and functionality are and will remain the exclusive property of Notary-App® Data Solutions, Inc. and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Notary-App® Data Solutions, Inc..\n
+    </string>
+    <string name="links_to_other">10. Links To Other Web Sites</string>
+    <string name="links_desc">
+        Our Service may contain links to third party web sites or services that are not owned or controlled by Notary-App® Data Solutions, Inc.\n
+        Notary-App® Data Solutions, Inc. has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.\n
+        You acknowledge and agree that Notary-App® Data Solutions, Inc. shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such third party web sites or services.\n
+        We strongly advise you to read the terms and conditions and privacy policies of any third party web sites or services that you visit.\n
+    </string>
+    <string name="termination">11. Termination</string>
+    <string name="termination_desc">
+        We may terminate or suspend your account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.\n
+        If you wish to terminate your account, you may simply discontinue using the Service.\n
+        All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.\n
+    </string>
+    <string name="indemnification">12. Indemnification</string>
+    <string name="indemnification_desc">
+        You agree to defend, indemnify and hold harmless Notary-App® Data Solutions, Inc. and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney fees), resulting from or arising out of a) your use and access of the Service, by you or any person using your account and password, or b) a breach of these Terms.\n
+    </string>
+    <string name="liability">13. Limitation Of Liability</string>
+    <string name="liability_desc">
+        In no event shall Notary-App® Data Solutions, Inc., nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.\n
+    </string>
+    <string name="disclaimer">14. Disclaimer</string>
+    <string name="disclaimer_dec">
+        Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.\n
+        Notary-App® Data Solutions, Inc. its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.\n
+    </string>
+    <string name="exclusions">15. Exclusions</string>
+    <string name="exclusions_desc">
+        Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you.\n
+    </string>
+    <string name="law">16. Governing Law</string>
+    <string name="law_desc">
+        These Terms shall be governed and construed in accordance with the laws of California, United States, without regard to its conflict of law provisions.\n
+        Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.\n
+    </string>
+    <string name="changes">17. Changes</string>
+    <string name="changes_desc">
+        We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.\n
+        By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.\n
+    </string>
+    <string name="contact_us">18. Contact Us</string>
+    <string name="contact_desc">
+        If you have any questions about these Terms, please contact us.
+    </string>
+    <string name="your_license">Your commission has been added successfully.</string>
+    <string name="face_scan">FACE SCAN</string>
+    <string name="front_id">Front ID</string>
+    <string name="back_id">Back ID</string>
+    <string name="verify_id">Verify</string>
+    <string name="validate_id">Verify ID Only</string>
+    <string name="lockadoc_id">Lock-A-Doc™</string>
+    <string name="notarize_a_document">Notary-App®</string>
+    <string name="veri_lock">Notary-App®</string>
+    <string name="verify_id_new">Verify ID</string>
+    <string name="validating_process_text">Please <b> Be Patient as We Verify Their Identity.</b> </string>
+    <string name="pledge_confirm">Do you confirm the above statement?</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="government">Government- Issued Identification</string>
+    <string name="more_details"><u>Read More</u></string>
+    <!--<string name="free_trial_period">Thank you for using Notary-App®.
+        You have a 7-Day Free Trial (Notary-App, ID verification).</string>-->
+    <!--<string name="free_trial_period">Thank you for using notaryapp Notary.\nYou have a 7 Days Free Trial within which you can run 3 Electronic ID Verification (Notarization, ID verification, journal uses) for free.</string>-->
+    <string name="free_trial_period">Welcome to the Notary-App® eJournal. For the next 7 days you can use it absolutely free, and you can also run 3 electronic ID verifications with no charge.</string>
+    <string name="Subscription_successful_msz">You have successfully upgraded your Notary-App® Subscription.\nYou are now a Notary-App® Member.\nYour existing ID Verification Pack will be carried forward.</string>
+    <string name="remaining">Remaining</string>
+    <!--<string name="free_trial_period">Thank you for using Notary-App®.
+        You have a 30-Day Free Trial within which you can run 10 transactions (Notary-App, ID verification, journal uses) for free.</string>-->
+    <string name="upgrade">UPGRADE</string>
+    <string name="purchase">PURCHASE</string>
+    <string name="expiry_msg">Your Trial Period has expired, in order to continue using this app upgrade to one of the subscription plans.</string>
+    <string name="plan_benefits">Benefits:</string>
+    <string name="_30_off">30%\n OFF</string>
+    <string name="basic_membership">Basic\nMembership</string>
+    <string name="notarize">Notarize</string>
+    <string name="add_signers">Add New Signer</string>
+    <string name="verify_signers">Verify Signers</string>
+    <string name="sign_documents">Sign Documents</string>
+    <string name="add_your_seal">Add Your Seal</string>
+    <string name="add_documents">Add Documents</string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="complete_journal">Complete Journal</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="sideArrow"><![CDATA[>]]></string>
+    <string name="register">SIGN UP FOR FREE</string>
+    <string name="signup_sub_head">Let’s lock your notarial identity against ID theft</string>
+    <string name="continueText">Continue</string>
+    <string name="liabilityOne">I have received satisfactory evidence of identity from each signer.</string>
+    <string name="liabilityTwo">The signers do NOT appear to me to be mentally incapable of understanding the document he/she is signing.</string>
+    <string name="liabilityThree">The signers do NOT appear to me to be acting under coercion or undue influence.</string>
+    <string name="liability4">I have no reason to believe that the notarized document will be used for an unlawful purpose.</string>
+    <string name="liability5">I do NOT have a financial interest in and I am NOT a party to the underlying transaction</string>
+    <string name="liability_sub_text">Please agree to each statement below by checking them off before starting\n the signing process.</string>
+    <string name="liability_head">LIABILITY:</string>
+    <string name="free_trial_member">Free Trial</string>
+    <string name="free_trial_expired">PLAN EXPIRED</string>
+    <string name="trial_expired">Free Trial Expired</string>
+    <string name="plan_expired">PLAN EXPIRED</string>
+    <string name="plan_expiry_msg">Your Plan has expired, in order to continue using this app upgrade to one of the subscription plans.</string>
+    <string name="select">SELECT</string>
+    <string name="_10_transactions">10 ID Verifications</string>
+
+
+    <string name="_30_days">30-DAY</string>
+    <string name="add_license">Add License</string>
+    <string name="add_commission">Add Commission</string>
+    <string name="i">i</string>
+    <string name="update_profile">UPDATE PROFILE</string>
+    <string name="notary_license_s">NOTARY COMMISSION(S)</string>
+    <string name="verified">VERIFIED!</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed lacus mattis, vulputate ante ut, venenatis leo. Sed molestie dui nisl, et gravida lectus lacinia quis. Etiam sollicitudin ex diam, nec aliquet nisl gravida ac. Nam sit amet dapibus quam. Sed sodales nulla vel tortor ornare, in fringilla magna finibus. Vivamus elementum ex nec fringilla pulvinar. Nullam at sem tristique dolor semper bibendum. Aenean pharetra massa ac tincidunt semper. Aliquam non ornare elit, vitae tempor purus. Vestibulum neque nunc, gravida sed ligula ut, volutpat rhoncus metus. Morbi facilisis ultrices ipsum, ut consequat nisi malesuada at. Vivamus neque urna, rhoncus ut tellus et, interdum efficitur lorem. Cras eleifend vestibulum tortor nec commodo. Maecenas in diam urna</string>
+    <string name="bla">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed lacus mattis, vulputate ante ut, venenatis leo. Sed molestie dui nisl, et gravida lectus lacinia quis. Etiam sollicitudin ex diam, nec aliquet nisl gravida ac. Nam sit amet dapibus quam. Sed sodales nulla vel tortor ornare, in fringilla magna finibus. Vivamus elementum ex nec fringilla pulvinar. Nullam at sem tristique dolor semper bibendum. Aenean pharetra massa ac tincidunt semper. Aliquam non ornare elit, vitae tempor purus. Vestibulum neque nunc, gravida sed ligula ut, volutpat rhoncus metus. Morbi facilisis ultrices ipsum, ut consequat nisi malesuada at. Vivamus neque urna, rhoncus ut tellus et, interdum efficitur lorem. Cras eleifend vestibulum tortor nec commodo. Maecenas in diam urna.!</string>
+    <string name="verify_signers_identity">VERIFY THE SIGNER\'S\n IDENTITY</string>
+
+    <string name="verify_witness_identity">VERIFY THE WITNESS\'S\n IDENTITY</string>
+    <string name="update">Update</string>
+    <string name="document_type">Document Type</string>
+    <string name="confirm_document_details">Document Details</string>
+    <string name="add_images_of_your_document">Add images of your \ndocument</string>
+    <string name="seal_signatures">Seal + Signatures</string>
+    <!--    Confirm-->
+    <string name="confrim_your_current_location">CONFIRM YOUR \nCURRENT LOCATION</string>
+    <string name="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="button_start">Start %1$s</string>
+
+    <string name="section_netverify">Netverify</string>
+    <string name="signer_personally_known">Signer Personally\n Known</string>
+    <string name="verify_with_credible_witness">Verify With Credible\n Witness</string>
+    <string name="you_will_be_notarizing">You will be notarizing using</string>
+    <string name="signerpersonal_capture">To prevent fraud, please capture an image of the signer’s face. Align their face below and take a photo.</string>
+    <string name="signercredible_capture">To prevent fraud, please capture an image of the signer’s face. Align their face below and take a photo</string>
+
+    <string name="witness_identity">Witness identity</string>
+    <string name="witnessalert">You may only notarize signatures of Signers who are present.\n\nYou will be responsible for the data that you capture for the signer and at least two credible witnesses</string>
+    <string name="signer_alert">You will be responsible for the data that you capture for the signer</string>
+    <string name="alert_caution">Proceed with Caution</string>
+    <string name="verify_alert">By law, you may only notarize the signatures of signers who are present.</string>
+    <string name="starred">Starred</string>
+    <string name="help">Help  Support</string>
+    <string name="logout">Logout</string>
+
+    <string name="faq">FAQ</string>
+    <string name="help_and_support"><![CDATA[Help & Support]]></string>
+    <string name="payment_settings">Payment Settings</string>
+    <string name="order_details">Order History</string>
+    <string name="membership_status">Membership Status</string>
+    <string name="membership">Membership</string>
+    <string name="transaction_log">Transaction Log</string>
+    <string name="home">Home</string>
+    <string name="tag_line">Empowering \nNotaries Every Day</string>
+    <string name="add_another_commission_number">Add Another Commission Number</string>
+    <string name="select_verify_method">Select the method you will use to verify the signer’s identity</string>
+    <string name="credible_witness">Credible Witness(es)</string>
+    <string name="personally_known">Signer is Personally Known to Me</string>
+    <string name="government_issued_id">Government Issued Identification</string>
+    <string name="protect_signer_identity">You protect the signer from ID theft by verifying their identity.</string>
+    <string name="why_we_need_your_id">Why We Need Your ID?</string>
+    <string name="watch_now">WATCH NOW</string>
+    <string name="select_id_type">Select Your ID Type</string>
+    <string name="by_law_notarize">By law, you may only notarize the signatures of signers who are present, and from whom you have satisfactory evidence of identity. Please review your state’s laws about credible witnesses.</string>
+    <string name="proceed_with_caution">Proceed with Caution</string>
+    <string name="alert_info">ALERT !</string>
+    <string name="sign_docs_note"><u>Note:</u>\n\nIf any signer signed outside your presence, you must ask them to confirm their signature.</string>
+    <string name="sign_docs_sub">Please have all parties sign and date the documents and please ensure:</string>
+    <string name="sign_docs_message">All appropriate pages are signed and dated</string>
+    <string name="sign_docs_head">COMPLETE THE SIGNING \n OF THE DOCUMENTS</string>
+    <string name="ok">OK</string>
+    <string name="add_seal_info">Choose the appropriate seal that you will be using for the NotaryApp™ process.</string>
+    <string name="please_ensure">Please ensure:</string>
+    <string name="sign_and_add_nyour_seal_s">SIGN AND ADD YOUR SEAL(S)</string>
+    <string name="next">Next</string>
+    <string name="add_seal_code_info">To protect your professional identity from theft and forgery, write this 7-digit “hash” on the document just below your seal.</string>
+    <string name="add_docs_info">Photograph the first page of the document and all pages with signatures and notarial seals. Please ensure:</string>
+    <string name="steady_hand">Photos are taken with a steady hand</string>
+    <string name="images_are_not_blurry">Images are not blurry</string>
+    <string name="capture_entire_document_within_view">Entire document is captured within view</string>
+    <string name="adding_your_ndocuments">Adding your \ndocuments</string>
+    <string name="pin_code">Zip Code</string>
+    <string name="state_location">State</string>
+    <string name="city_location">City</string>
+    <string name="street">Street</string>
+    <string name="location">Location</string>
+    <string name="please_confirm_your_location">Please confirm your location</string>
+    <string name="address_loc">Address</string>
+    <string name="location_added">Location Added</string>
+    <string name="verified_signers">Verified Signers</string>
+    <string name="document_signed">Document Signed</string>
+    <string name="seals_added">Seals Added</string>
+    <string name="license">License #</string>
+    <string name="documents_added">Documents Added</string>
+    <string name="free_transaction_used">Free Transaction Used:</string>
+    <string name="transactions_used">Transactions Used</string>
+    <string name="transactions_purchased">Transactions Purchased</string>
+    <string name="remaining_transactions">Remaining Transactions</string>
+    <string name="notarize_complete">Notarization \n Complete!</string>
+    <string name="notarize_complete_txt">This completes the Notary-App® verification process for this document.</string>
+
+    <string name="veri_lock_complete">Notary-App®\nComplete!</string>
+    <string name="NotaryApp_completed_info">This completes the Notary-App® verification process for this transaction.</string>
+
+    <string name="return_to_dashboard">RETURN TO DASHBOARD</string>
+    <string name="veri_lock_info_1">Notary-App® package for $3.99 per month</string>
+    <string name="chosen_plans">Chosen Plan</string>
+    <string name="starter_transaction_package_including_10_transactions_verify_id_only_verify_and_authenticate">Starter Transaction Package Including 10(Verify ID only,Verify and Authenticate)</string>
+    <string name="inoice_package">Package</string>
+    <string name="invoice_transaction">Transaction</string>
+    <string name="invoice_to_pay">To Pay</string>
+    <string name="select_recipients">Select Recipients</string>
+    <string name="select_docs">Documents to share</string>
+    <string name="email_id">Email ID</string>
+    <string name="send">SEND</string>
+    <string name="documents_shared">Documents\n Shared</string>
+    <string name="the_document_have_been_shared_with_the_selected_recipients">The document have been shared with the selected recipients</string>
+
+    <string name="terms_and_conditions_applied">Terms and conditions applied</string>
+    <string name="pending">PENDING</string>
+    <string name="compliance_agmt">COMPLIANCE AGMT</string>
+    <string name="march_26_2020">March 26, 2020</string>
+    <string name="john_doe">John Doe</string>
+    <string name="ron_coming_soon">R.O.N </string>
+    <string name="coming_soon">(Coming Soon)</string>
+    <string name="coming__soon">Coming Soon</string>
+    <string name="e_journal_coming_soon">e-Journal</string>
+    <string name="verify_success">Congratulations!\nThe ID has been successfully verified.</string>
+    <string name="dash_sub_head">Now that you’re registered start by\nnotarizing your first document.</string>
+    <!--<string name="verify_success">Congratulations, \nYour ID has been successfully validated.
+        You are now a Notary-App® verified member.</string>-->
+    <string name="verification_failed_please_try_again">Verification failed. Please try again.</string>
+    <string name="NotaryApp_dash_info">Notary-App® is a five-step process. Please complete each preceding step before proceeding to the next.</string>
+    <string name="add_seal">Add Seal</string>
+    <string name="registration">Registration</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="add_seals_reg">Add Your Seal(s) to the Commission</string>
+    <string name="alert_add_docs_desc">In the subsequent screens take photographs of all the seal and signature pages of the document you are notarizing</string>
+    <string name="accept">Accept</string>
+    <string name="finish">Finish</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions</string>
+    <string name="buffering">Buffering</string>
+    <string name="zip">Zip</string>
+    <string name="alert_personally_known">By law, you may only notarize the signatures of signers who are present and from whom you have satisfactory evidence of identity. Please review your state’s laws about signers who are personally known to you.</string>
+    <string name="enter_email_id">Enter Email ID</string>
+    <string name="share_documents">SHARE DOCUMENTS </string>
+    <string name="select_id">Select ID</string>
+    <string name="confirm_apn_number">Confirm APN Number / Unique ID</string>
+    <string name="apn_number">APN Number / Unique ID</string>
+    <string name="document_name">Document Name</string>
+    <string name="complete">complete</string>
+    <string name="write_code">Write this code under\n your seal</string>
+    <string name="history">History</string>
+    <string name="instructions">Instructions</string>
+    <string name="alertHead">ALERT !</string>
+    <string name="business_address">My Business Address is same as my Profile Address</string>
+    <string name="commission_number_added">Commission Number Added</string>
+    <string name="days_trial">Your 30-day Free Trial has started.</string>
+    <string name="claim_your_profile"><u>CLAIM YOUR PROFILE</u></string>
+    <string name="veri_lock_member">Notary-App® Member</string>
+    <string name="freeTrial">Buy a package of ID verifications today and never wonder again if an ID is real or fake.</string>
+
+    <string name="_10">10</string>
+
+
+    <!--    New mem flowtext-->
+    <string name="_30">30</string>
+    <string name="days_left">Days Left</string>
+    <string name="id_verification">ID Verifications</string>
+    <string name="id_verifications">ID Verification</string>
+    <string name="i_agree_to_the_terms_conditions">I agree to the <u>Terms &amp; Conditions</u></string>
+    <string name="check_status">DASHBOARD</string>
+    <string name="trial_expired_desc">Your Free trial has expired, in order to continue using this app upgrade to Notary-App®</string>
+    <string name="id_verifications_added">ID Verifications\n added to your pack</string>
+    <string name="add_id_package">Add ID Verification Package</string>
+    <string name="view_receipt">View Receipt</string>
+    <string name="download_receipt">Download Receipt</string>
+    <string name="unsubscribe">Unsubscribe</string>
+    <string name="unsubscribeDesc">If you unsubscribe from Notary-App® Membership plan, you will no longer be able to perform Notary-App® or Verify ID operations after May 5 2020.</string>
+    <string name="disclamerDesc">Thank you for choosing to protect yourself, your signers, and vulnerable elderly homeowners from forgery and identity theft with a monthly subscription to Notary-App®. Notary-App® Data Solutions, Inc. will not keep any of your credit card information, but our payment processor, Stripe, will. As long as you are a subscriber, we will instruct Stripe to charge your credit the cost of your subscription each month. You can cancel at any time. You can also change your payment information at any time. For more information, please review Stripe\'s privacy policy and Notary-App® Data Solution\'s privacy policy and terms and conditions.</string>
+    <string name="disclaimerHeading">Disclaimer</string>
+    <string name="membership_expired">Membership Expired</string>
+    <string name="your_veri_lock_subscription_package_has_expired_in_order_to_continue_using_this_app_renew_the_subscription_plan">Your Notary-App® subscription package has expired, in order to continue using this app renew the subscription plan.</string>
+    <string name="current_plan">Current Plan:</string>
+    <string name="veri_lock_membership">Notary-App® Membership</string>
+    <string name="id_verification_complete">ID VERIFICATION COMPLETE!</string>
+    <string name="this_completes_the_id_verification">This completes the ID Verification process.</string>
+    <string name="get_now">GET NOW</string>
+    <string name="pay_now">PAY NOW</string>
+    <string name="recurring_monthly_charge">Recurring monthly charge</string>
+    <string name="all_parties_signed">All parties have signed and dated the documents.</string>
+    <string name="if_pages_signed">If pages have already been signed, remember to ask if the signatures are the signer\'s (and repeat for each signer).</string>
+    <string name="notary_commission_s">NOTARY COMMISSION(S)</string>
+    <string name="your_license_number_had_been_added_successfully">Your License number had been added successfully</string>
+    <string name="your_license_number">Your existing commission numbers are:</string>
+    <string name="documents">Documents</string>
+    <string name="and_privacy_policy">and <u> Privacy Policy</u> </string>
+    <string name="prev"><![CDATA[< Prev]]></string>
+
+    <string name="next_page"><![CDATA[Next >]]></string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="setup_1_2">STEP 1/2</string>
+    <string name="verify_your_identity">VERIFY YOUR IDENTITY</string>
+
+    <string name="commission_number">COMMISSION NUMBER(*)</string>
+    <string name="commission_expiry_date">Commission Expiry Date</string>
+    <string name="expiry_date_format">MM/DD/YYYY</string>
+    <string name="business_phone">Business Phone</string>
+    <string name="add_email">Add Email ID</string>
+    <string name="qw">\?</string>
+
+    <string name="lock_document">Lock Documents</string>
+    <string name="enter_document_details">Enter Document Details</string>
+
+
+    <!--  Sourav 12.09.20 -->
+    <string name="scan_document_text">Scan Documents</string>
+    <string name="scanning_documents">Scanning Documents</string>
+    <string name="alert_add_docs_desc_new">On the following screens, at a minimum, you MUST take a picture of
+        every page that has your seal, your signature, and/or the signature(s)
+        of the signer(s).\n\n
+        At the request of the signer(s), you MAY choose to take a picture of
+        every page of the document. Notary-App® will then compile the entire
+        document into a single PDF document.\n\n
+        Explain to the signer that their document(s) will be encrypted and
+        securely stored for them forever on the Notary-App® blockchain. They
+        will have easy access to their document(s) with the 7-digit hash and
+        their email address. Tell them there will be a fee to view and print the
+        document(s).</string>
+    <string name="vej_alert_add_docs_desc_new">On the following screens, at a minimum, you MUST take a picture of
+        every page that has your seal, your signature, and/or the signature(s)
+        of the signer(s).\n\n
+        At the request of the signer(s), you MAY choose to take a picture of
+        every page of the document. Notary-App® e-Journal will then compile the entire
+        document into a single PDF document.\n\n
+        Explain to the signer that their document(s) will be encrypted and
+        securely stored for them forever on the Notary-App® blockchain. They
+        will have easy access to their document(s) with the 7-digit hash and
+        their email address. Tell them there will be a fee to view and print the
+        document(s).</string>
+    <string name="documents_locked">Documents Locked</string>
+    <string name="share_copy_client">Do you want to share a copy of\n the document with the client?</string>
+
+    <string name="alert_test">Your client will receive an email that will instruct them how to access their document(s) online.</string>
+    <string name="doc_image">Please Start Scan your Doc Image. Multiple Document image can be uploaded.</string>
+    <string name="signer_face">Signer</string>
+    <string name="witness_face">Witness</string>
+
+    <string name="notary_verified">NOTARY VERIFIED</string>
+    <string name="witness_verified">WITNESS VERIFIED</string>
+
+
+    <string name="notaryapp_verified">notaryapp VERIFIED</string>
+    <string name="skip_adding_seals">SKIP ADDING SEALS</string>
+    <string name="default_seal_alert">Unless it is
+        prohibited by the laws of your state, we recommend that you complete the "Add Seal" process. Only you
+        will have access to the image of your seal, and we will archive it securely on the blockchain as part of your
+        professional identity as a notary public.\n\n
+        You are skipping the Add Seal process for Commission Number(s) AS5G4RD and TWX8OO85. Please note
+        that if you skip the "Add Seal" process, a generic seal image will be provided in lieu of the image of your
+        Seal within the notaryapp application</string>
+
+    <string name="seal_text">SEAL</string>
+
+    <string name="click_message">Steps once completed can not be updated anymore!</string>
+    <string name="freeTrialNew">Become a notaryapp Premium Member today and never wonder if an ID is real or fake.</string>
+
+    <string name="freeTrialNewExpSoon">Your %1$s will expire soon.</string>
+
+    <string name="freeTrialNewActive">Your %1$s is active.</string>
+    <string name="freeTrialNewExp">Your %1$s has expired.</string>
+    <string name="default_notification_channel_id">default_notification_channel_id</string>
+    <string name="your_profile_picture">Let\'s add your profile picture.</string>
+    <string name="Align_your_face">Align your face below and capture a selfie.</string>
+
+    <string name="profile_picture">Profile picture</string>
+    <string name="dv_scanview_continue">Continue</string>
+    <string name="lad_dash_info">Lock-A-Doc™ is a 4-step process \n starting with "Scan Document(s)".
+        Please complete each step before proceeding to the next.</string>
+
+    <string name="scan_documents">Scan Document(s)</string>
+
+    <!-- LOCK-A-DOC -->
+
+    <string name="photograph_party">Photograph Party(ies)</string>
+    <string name="photograph_parties">PHOTOGRAPH PART(IES)</string>
+
+
+    <string name="confirm_location_lad">Confirm Location</string>
+    <string name="send_link">Send Link</string>
+    <string name="lock_a_doc">Lock-A-Doc™</string>
+    <string name="title_activity_scan_document">ScanDocumentActivity</string>
+
+    <string name="hello_world">Hello Square World!</string>
+    <string-array name="identityType">
+        <item>Driver\'s License</item>
+        <item>Passport</item>
+        <item>NIC (State ID)</item>
+        <item>Work Permit</item>
+        <item>Passport Card</item>
+        <item>Residence Permit</item>
+        <item>VISA</item>
+    </string-array>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string-array name="docType">
+        <item>Compliance Agreement</item>
+        <item>Correction Agreement</item>
+        <item>Deed of Trust</item>
+        <item>Deed of Mortgage</item>
+        <item>Deed Grant</item>
+    </string-array>
+
+    <string name="lad_docs_head">Scan Documents</string>
+    <string name="lad_docs_head_subheading">Before capturing photographs of the pages of the document please ensure :</string>
+    <string name="lad_docs_message">All pages are signed by the party(ies) involved.</string>
+
+    <string name="lad_docs_message1">Photos are taken with a steady hand.</string>
+    <string name="lad_docs_message2">Images are not blurry.</string>
+    <string name="lad_docs_message3">Entire document is captured within view.</string>
+    <string name="proceed">Proceed</string>
+    <string name="lad_apn_number">Unique ID Number(If Any)</string>
+    <string name="lad_confirm_apn_number">Confirm Unique ID Number</string>
+
+
+    <string name="lad_alert">On the next screen, Lock-A-Doc™ will generate a unique 7-digit hash code
+                                specifically for this document.\n\nWrite the hash code legibly on the
+                                first page of the document, preferably
+                                near the bottom right corner if possible.\n\nLock-A-Doc™ will assemble the pages
+                                into a single PDF document and store
+                                it securely on the Notary-App® blockchain.\n\nSubsequent viewers of this document
+                                can enter the hash code at
+                                <a href="https://www.notaryapp.com/">www.notaryapp.com</a> to confirm
+                                its authenticity.</string>
+
+    <string name="lad_send_link">Send Link</string>
+    <string name="lad_scanned_document">Scanned Document</string>
+    <string name="lad_parties_photographed">Parties Photographed</string>
+    <string name="lad_document_type">Enter Document Type</string>
+    <string name="lad_complete">Lock-A-Doc™
+        Complete!</string>
+
+    <string name="lad_complete_txt">The document(s) have been shared with the selected participants.\n\nThis completes the Lock-A-Doc™ process for this document.</string>
+    <string name="doc_share">Documents Shared</string>
+
+
+    <string name="lad_write_code">Write This Code\nOn the First Page</string>
+
+    <string name="notaryapp">notaryapp™</string>
+    <string name="notaryapp_sales_dashboard">notaryapp™\nSales DashBoard</string>
+    <string name="go_to_website">Visit Website</string>
+    <string name="your_coupon_code_is">Your Code</string>
+    <string name="referral_id_for_notaryapp">Referral ID for notaryapp™</string>
+    <string name="instruct_your_customer">Instruct your customer to use your notaryapp™ code.</string>
+    <string name="your_notaryapp_code_give">Your notaryapp™ code gives your customers a 10% discount.</string>
+    <string name="your_notaryapp_code_is">Your notaryapp™ code is how we keep track of the memberships you sell.</string>
+    <string name="resource_material">Resource Materials</string>
+    <string name="notaryapp_dashboard">notaryapp™ Dashboard</string>
+    <string name="total_subscriptions_sold">Total\nSubscriptions</string>
+    <string name="sold_this_month">Sold\nThis Month</string>
+    <string name="revenue_this_month">Revenue\nThis Month</string>
+    <string name="total_revenue">Total\nRevenue</string>
+    <string name="monthly_subscription">Monthly\nSubscription</string>
+    <string name="annual_subscription">Annual\nSubscription</string>
+    <string name="three_years_subscription">3 Years\nSubscription</string>
+    <string name="lifetime_subscription">Lifetime\nSubscription</string>
+    <string name="view_detail_report">View Detail Report</string>
+    <string name="notaryapp_detailed_report">notaryapp™\nDetailed Report</string>
+    <string name="notaryapp_report">notaryapp™ Report</string>
+    <string name="your_code">Your Code</string>
+    <string name="sales_dashboard">Sales Dashboard</string>
+    <string name="detail_report">Detail Report</string>
+    <string name="detailed_report">Detailed Report</string>
+    <string name="date_created">Date Created</string>
+    <string name="type">Plan</string>
+    <string name="last_renewal_date">Next Renewal Date</string>
+    <string name="property_details">Property Details</string>
+    <string name="no_records_found">No Records Found</string>
+
+    <string name="my_web_profile">My Web Profile</string>
+    <string name="verify_in_blockchain">VERIFY IN BLOCKCHAIN</string>
+
+    <!--  Share App screen -->
+    <string name="share_app_header">Enjoying using Notary-App®?</string>
+    <string name="share_app_sub_header">Share Notary-App® with your friends.</string>
+
+    <string name="warning_msz_dash">Your Commission# is Expiring Soon.. Please <u><b>Renew</b></u></string>
+
+    ////////
+    <string name="liabilities">Liability:</string>
+    <string name="liabilities_sub_text">Please agree to each statement below by checking them off before starting the signing process.</string>
+    <string name="select_all"><u>Select All</u></string>
+    <string name="i_have_received">I have received satisfactory evidence of identity from each signer.</string>
+    <string name="the_signers_do_not">The signers do NOT appear to me to be mentally incapable of understanding the document he/she is signing.</string>
+    <string name="the_signers_do_not_appear">The signers do NOT appear to me to be acting under coercion or undue influence.</string>
+    <string name="i_have_no_reason_to_believe">I have no reason to believe that the notarized document will be used for an unlawful purpose.</string>
+    <string name="i_do_not_have_a_financial">I do NOT have a financial interest in and I am NOT a party to the underlying transaction.</string>
+    <string name="review_documents">Review Documents</string>
+    <string name="please_review_all">Please review all of the documents and please ensure:</string>
+    <string name="there_are_not_any_blank">There are not any blanks.</string>
+    <string name="it_is_not_postdated">It is not postdated.</string>
+
+    <string name="please_have_all_parties">Please have all parties sign and date the documents and ensure:</string>
+    <string name="all_appropriate_pages">All appropriate pages are signed and dated.</string>
+    <string name="note_if_pages_have">Note: If pages have already been signed, remember to ask if the signatures are the signer’s (and repeat for each signer).</string>
+    <string name="complete_your_journal_entry">COMPLETE YOUR\nJOURNAL ENTRY</string>
+    <string name="fees">Fees</string>
+    <string name="fee_amount">Fee Amount</string>
+    <string name="type_of_notarization">Type of Notarization</string>
+    <string name="collected_fees_amount">Fees Collected?</string>
+    <string name="add_note">Add Notes</string>
+    <string name="add_heading">Enter Title</string>
+    <string name="enter_notes">Enter notes.</string>
+
+    <string name="capture_the_signers_thumbprint">CAPTURE THE\nSIGNER’S THUMBPRINT</string>
+    <string name="signers_thumbprint_capture">Please take a photo of the signer’s right thumbprint on a piece of plain white paper</string>
+    <string name="complete_your_journal">Complete Your Journal</string>
+    <string name="sign_to_complete_the_notarization">Request the signer to click and sign on the blank area of the digital signature pad below OR capture an image of their signature specimen on a plain white paper using the camera button below.</string>
+    <string name="done_">DONE</string>
+
+    <string name="please_ensure_all_the_steps">Please ensure all the steps below can be followed by now.</string>
+    <string name="please_follow_the_instructions_below">Please follow the instructions below to capture the signer’s signature and thumbprint.</string>
+
+    <string name="id_card_of_the_signer">ID card of the signer need to be verified.</string>
+    <string name="face_photograph_of_the">Face photograph of the Signer need to be uploaded.</string>
+    <string name="needs_to_upload_a_picture_of">Needs to upload a picture of the thumbprint on a paper.</string>
+    <string name="signer_needs_to_sign_to">Signer needs to Sign to complete the process.</string>
+    <string name="journal_completed">Journal Completed</string>
+    <string name="journal_fees">Journal Fees</string>
+    <string name="add_notes_optional">Add Notes (Optional)</string>
+    <string name="note_added">Note Added</string>
+    <string name="all_signers">All signer\'s</string>
+    <string name="take_a_picture_of_the_thumbprint">Capture an image of the thumbprint of each signer on plain white paper.</string>
+    <string name="collect_the_signature_of">Collect a digital signature of the signer or capture an image of their signature on plain white paper.</string>
+    <string name="signers_thumbprint">Signer\'s Thumbprint</string>
+    <string name="please_take_a_photo_of_the_signers_right_thumbprint">Please take a photo of the signer’s\nright thumbprint on a piece of\nplain white paper</string>
+    <string name="signature_thumbs">Signature &amp; Thumbs</string>
+    <string name="signature_thumbprint_collected">Sign &amp; Thumbprint Captured</string>
+
+
+    <string-array name="notarizationType">
+        <item>Acknowledgement</item>
+        <item>Affidavit</item>
+        <item>Certification</item>
+        <item>Copy</item>
+        <item>Declaration</item>
+        <item>Deposition</item>
+        <item>Jurat</item>
+        <item>Marriage</item>
+        <item>Oath / Affirmation</item>
+        <item>Official Witness</item>
+        <item>Protest</item>
+        <item>Signature</item>
+        <item>Verification</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="ejournal">e-Journal™</string>
+    <string name="veri_lock_ejournal">Notary-App® e-Journal</string>
+    <string name="print_journal">Save / Print Journal</string>
+    <string name="NotaryApp_ejournal__dash_info">e-Journal™ is a eight-step process. Please complete each preceding step before proceeding to the next.</string>
+
+    <string name="form_main_text">Please make sure that the information you enter is correct and error-free because it will be stored on the blockchain. Data stored on the blockchain cannot be changed.</string>
+    <string name="verify_text">VERIFY</string>
+
+    <!--  youtube screen -->
+    <string name="how_to_videos">How-To Videos</string>
+    <string name="verify_id_only">Verify ID Only</string>
+    <string name="how_to_use">How to Use</string>
+    <string name="watch_the_explainer">Watch the explainer videos below to understand how each workflow empowers a notary to notarize legal documents.</string>
+    <string name="notary_electronic_journals">Notary Electronic journals are more secured, reliable &amp; efficient than a notary paper journal.</string>
+    <string name="cloud_is_paas">Cloud is paas. Now Secure important documents with Blockchain (NFT).</string>
+    <string name="preventing_id_theft">Preventing ID Theft &amp; Forgery in Real Estate Transactions</string>
+    <string name="we_use_cutting_edge">We use cutting-edge KYC technology to confirm that users are who they claim to be.</string>
+
+
+    <!--  Unsubscribe -->
+    <string name="sorry_to_see_you_go">Sorry to see you go.</string>
+    <string name="if_you_unsubscribe">If you unsubscribe, you end your subscription with Notary-App® now.</string>
+    <string name="you_account_and_data_with">You account and data with COMPANY_NAME Solutions would be removed from our database.</string>
+    <string name="you_would_not_have_access">You would not have access to any data stored by you on the Notary-App® application.</string>
+    <string name="reason">REASON</string>
+    <string name="tell_us_why">Tell Us Why</string>
+    <string name="we_are_sorry_to_see">We are sorry to see you go and hope you reconsider and make use of our FREE service. Still do not want to continue?\nPlease help us understand the reason behind your decision.</string>
+    <string name="i_dont_use_this">I don’t use this application enough.</string>
+    <string name="i_was_just_trying_out">I was just trying out the application.</string>
+    <string name="i_found_an_alternate_application">I found an alternate application which serves my purpose.</string>
+    <string name="name_of_the_alternate">Name of the alternate application...</string>
+    <string name="i_accidently_created_multiple">I accidently created multiple Notary-App™ accounts.</string>
+    <string name="i_have_a_privacy_concern">I have a privacy concern. Go through our privacy policy.</string>
+    <string name="technical_issues">Technical issues.</string>
+    <string name="please_share_the_problem">Please share the problem you faced...</string>
+    <string name="other_state_reason">Other (state reason below)</string>
+    <string name="add_you_reason_here">Add you reason here....</string>
+    <string name="unregister">Unregister</string>
+    <string name="deactivate">Deactivate</string>
+    <string name="are_you_sure_you_want">Are you sure you want to unregister from Notary-App™.\nOnce you unregister, your data would be deleted and you would not be able to retrieve it.\n\nNeed your data for a later date?\nUse the Deactivate option instead.</string>
+    <string name="are_you_sure">Are You Sure?</string>
+    <string name="continue_as">Continue As</string>
+    <string name="activate">Activate</string>
+    <string name="your_account_seems">Your account seems to be deactivated.\n\nTo reactivate your account please click on \"Activate\"</string>
+
+    <string name="onboarding_demonstration"><u>Onboarding Demonstration</u></string>
+
+    <!--  Membership Subscription update -->
+    <string name="complete_electronic">Complete Electronic Notary Journal</string>
+    <string name="monthly_package">Monthly Package</string>
+    <string name="yearly_membership">Yearly Membership</string>
+    <string name="billed_annually">Billed annually</string>
+    <string name="verification_package">Verification Package\nPurchase</string>
+    <string name="add_transaction_package">Add Transaction Package</string>
+    <string name="id_verification_pack">ID Verification Pack\nAdded</string>
+    <string name="transaction_failed">Transaction Failed</string>
+    <string name="the_payment_was_declined">The payment was declined by the payment processor. This could be due to insufficient balance, xpired card or other reasons. Kindly retry the payment using another card.</string>
+
+    <string name="electronic_id">Electronic ID\nVerification Not Available</string>
+    <string name="your_electronic_id_verification">Your Electronic ID Verification (IDV) package has expired.\n\nPurchase more IDVs before your next notarization.</string>
+    <string name="at_this_step_you_are">At this step you are supposed to verify the identity of signers. Choose the most appropriate method from the 4 options given below.</string>
+    <string name="please_note_each"><b>Please note</b>: Each electronic verification will cost you 1 IDV.</string>
+    <string name="select_the_method_you">Select the method you will verify the signer’s identity</string>
+    <string name="verify_id_manually">Verify ID Manually</string>
+    <string name="verify_id_electronically">Verify ID Electronically</string>
+    <string name="verify_credible_witnesses_manually">Verify Credible Witnesses Manually</string>
+    <string name="verify_credible_witnesses_electronically">Verify Credible Witnesses Electronically</string>
+    <string name="now_verify_the_identity">Now verify the identity(ies) of the signer(s) and witnesses (if any). Choose the most appropriate option below.</string>
+
+    <string name="use_this_button_to_upload_and">Use this button to upload and lock an important document on the blockchain for a client (i.e., a will, a power of attorney, a drawing of an invention, a music score, or anything else that is important to them).\n\nYou may charge any fee for this service and retain the entire amount, but when setting the price, keep in mind that when your client accesses the document through their notaryapp dashboard, they will be charged $3.99/ document.\n\nWatch the how-to video in the menu.</string>
+    <string name="use_this_shortened_version_of">Use this shortened version of the e-Journal if your state requires you to use a paper journal. In this version, we have eliminated everything except the fraud-prevention functions so you can use this Skinny e-Journal alongside your paper journal to protect you and your customers from identity theft and forgery without significantly increasing the amount of time it takes to complete a notarization.\n\nWatch the how-to video in the menu.</string>
+    <string name="replace_all_other_notarial_journals">Replace all other notarial journals with this complete e-Journal that fits in your back pocket, takes you through the notarization process step-by-step, has unlimited and secure storage, and is easily searchable. This e-Journal protects you and your clients from identity theft and forgery and reduces your potential civil liability. This e-Journal is the ONLY complete solution to the growing crimes of home title theft and deed fraud. (Your county or state could eliminate home title theft if the Notary-App® e-Journal were required in all real estate transactions.)\n\nWatch the how-to video in the menu.</string>
+    <string name="you_can_increase_your_income">You can increase your income by protecting your customers from a serious threat to their home ownership. notaryapp™ is a title monitoring service that protects homeowners from the worst effects of the growing crime of home title theft, and it was designed by the most experienced title theft attorney in the country. Sign up today to be a notaryapp™ affiliate.</string>
+    <string name="use_this_button_if_you">Use this button if you want to electronically verify a government-issued ID.\n\nWatch the how-to video in the menu.</string>
+    <string name="skinny_ejournal">Skinny e-Journal</string>
+    <string name="complete_ejournal">Complete e-Journal</string>
+
+    <string name="enter_signers_contact_information">Enter Signer\'s Contact\nInformation</string>
+    <string name="enter_the_contact_information_of_witness">Enter Witness\' Contact Information</string>
+    <string name="take_a_photograph_of_the_signer">Take A Photograph Of The Signer</string>
+    <string name="take_a_photograph_of_witness">Take A Photograph Of Witness</string>
+    <string name="review_the_signers_photograph">Review The Signer\'s Photograph</string>
+    <string name="review_the_witness_photograph">Review The Witness\' Photograph</string>
+</resources>

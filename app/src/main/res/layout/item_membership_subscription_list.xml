@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_crown"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_silver_crown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/packageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp"
+            tools:text="Monthly Package"
+            android:textColor="@color/black"
+            android:fontFamily="@font/oswald_medium"
+            android:layout_marginTop="@dimen/padding_10"
+            android:textSize="@dimen/headerTextTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon_crown"/>
+
+        <TextView
+            android:id="@+id/packageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complete_electronic"
+            android:fontFamily="@font/oswald_medium"
+            android:textStyle="bold"
+            android:paddingHorizontal="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_10"
+            android:textSize="@dimen/normalText"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/packageName"/>
+        <TextView
+            android:id="@+id/packageDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Recurring monthly charge"
+            android:textColor="@color/colorGrey"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/smallText"
+            android:layout_marginTop="@dimen/padding_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/packageText"/>
+        <TextView
+            android:id="@+id/packageOPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="@dimen/smallText"
+            tools:text="$7.49"
+            android:textColor="@color/colorBrightOrange"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/packageDesc"/>
+        <View
+            android:id="@+id/strikeThroughView"
+            app:layout_constraintEnd_toEndOf="@+id/packageOPrice"
+            app:layout_constraintStart_toStartOf="@+id/packageOPrice"
+            app:layout_constraintBottom_toBottomOf="@+id/packageOPrice"
+            app:layout_constraintTop_toTopOf="@+id/packageOPrice"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorBrightOrange"/>
+        <TextView
+            android:id="@+id/packagePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="@dimen/largeText"
+            tools:text="$7.49"
+            android:textColor="@color/colorBrightOrange"
+            android:paddingBottom="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/packageOPrice"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnGetNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_now"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:background="@drawable/button_style_primary"
+        android:fontFamily="@font/roboto_regular"
+        android:paddingHorizontal="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout11"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayout11"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

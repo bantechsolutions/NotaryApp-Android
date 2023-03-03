@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:gravity="center"
+        android:background="@color/dialogue_trans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="7dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/white_bg_dash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/alert_head_box"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:textSize="@dimen/headerText"
+                        android:id="@+id/textHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/oswald_medium"
+                        android:text="@string/alert"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:textSize="@dimen/normalText"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/alertMess"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="If you cancel now, your account will be charged for the verification attempt. If you wait the full 5 minutes and Notary-App® is still unable to complete the verification, then your account will not be charged."
+                    android:textColor="@color/colorBlack"
+                    android:textAlignment="textStart"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/head"
+                    app:layout_constraintBottom_toTopOf="@+id/check">
+
+                </TextView>
+
+                <CheckBox
+                    app:layout_constraintTop_toBottomOf="@+id/alertMess"
+                    app:layout_constraintBottom_toTopOf="@+id/btnYes"
+                    android:layout_margin="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Do not show this message again."
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/notaryappCheckboxLicense"
+                    android:id="@+id/check"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btnNo"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/button_style_primary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="CANCEL"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/buttonText"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="parent">
+                </Button>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+
+                <Button
+                    android:id="@+id/btnYes"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/button_style_primary"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="OK"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/buttonText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline">
+
+                </Button>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

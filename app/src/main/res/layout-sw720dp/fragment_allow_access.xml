@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacground_second"
+    tools:context=".ui.fragments.registration.AllowAccessFragment">
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/btnCloseBackSize"
+        android:layout_height="@dimen/btnCloseBackSize"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_close"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/topGuideline"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/footerView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/full_screen_form_card_width"
+                android:layout_marginEnd="@dimen/full_screen_form_card_width"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp">
+
+                    <TextView
+                        android:textSize="@dimen/mainText"
+                        android:id="@+id/accessHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+
+                        android:text="@string/allow_access"
+                        android:textColor="@color/darkBlueText"
+                        tools:ignore="SpUsage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        tools:ignore="SpUsage"
+                        android:id="@+id/accessText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="left"
+                        android:text="@string/access_text"
+                        android:textColor="@color/textblue"
+                        android:textSize="@dimen/subHeadingText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/accessHead" />
+
+
+                    <ImageView
+                        android:id="@+id/ic_camera"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="30dp"
+                        android:alpha="0.5"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_camera_"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/accessText" />
+
+                    <TextView
+                        android:textSize="@dimen/normalText"
+                        android:id="@+id/cameraTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start"
+
+                        android:text="@string/camera_string"
+                        android:textColor="@color/textCyan"
+                        tools:ignore="SpUsage"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/ic_camera"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ic_camera"
+                        app:layout_constraintTop_toTopOf="@+id/ic_camera" />
+
+
+                    <ImageView
+                        android:id="@+id/ic_message"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="35dp"
+                        android:alpha="0.5"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_message"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cameraTV" />
+
+                    <TextView
+                        android:textSize="@dimen/normalText"
+                        android:id="@+id/msgTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start"
+
+                        android:text="@string/msg__string"
+                        android:textColor="@color/textCyan"
+                        tools:ignore="SpUsage"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/ic_message"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ic_message"
+                        app:layout_constraintTop_toTopOf="@+id/ic_message" />
+
+                    <ImageView
+                        android:id="@+id/ic_location"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="35dp"
+                        android:alpha="0.5"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_location"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/msgTV" />
+
+                    <TextView
+                        android:textSize="@dimen/normalText"
+                        android:id="@+id/locationTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start"
+
+                        android:text="@string/location_string"
+                        android:textColor="@color/textCyan"
+                        tools:ignore="SpUsage"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/ic_location"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ic_location"
+                        app:layout_constraintTop_toTopOf="@+id/ic_location" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white_trans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBottom">
+
+        <Button
+            android:id="@+id/btn_access_Ok"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+            android:background="@drawable/button_style_tertiary"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/text_ok"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBrightOrange"
+            android:textSize="@dimen/buttonText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

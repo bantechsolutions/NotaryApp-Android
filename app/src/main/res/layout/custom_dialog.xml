@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:background="@drawable/verification_failed_top"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:textSize="@dimen/headerText"
+                            android:id="@+id/textHead"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/oswald_medium"
+                            android:text="@string/alert"
+                            android:textAllCaps="true"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:textSize="@dimen/normalText"
+                        android:id="@+id/alertMess"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="ALERT"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorGrey"
+                        app:layout_constraintBottom_toTopOf="@+id/btnNo"
+                        app:layout_constraintTop_toBottomOf="@+id/head"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/btnNo"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/button_style_primary"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="NO"
+                        android:textAllCaps="true"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/buttonText"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btnYes"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                    </Button>
+                    <Button
+                        android:id="@+id/btnYes"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/button_style_primary"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="YES"
+                        android:textAllCaps="true"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/buttonText"
+                        app:layout_constraintBottom_toBottomOf="@id/btnNo"
+                        app:layout_constraintTop_toTopOf="@id/btnNo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/btnNo">
+
+                    </Button>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

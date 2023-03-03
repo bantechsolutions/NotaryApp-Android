@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginStart="5dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_dash">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topContainer"
+            android:layout_width="0dp"
+            android:layout_height="145dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contentBody"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/profileImageLayout"
+                android:layout_width="68dp"
+                android:layout_height="82dp"
+                android:background="@drawable/dash_item_frame"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.notaryapp.utils.rounded_imageView.RoundedImageView
+                    app:riv_corner_radius="15dip"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="false"
+                    android:layout_margin="5dp"
+                    android:background="@color/white"
+                    android:id="@+id/proImg"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_person_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/proImgProgress"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:indeterminateDrawable="@drawable/progress_indeterminate"
+                    />
+
+                <TextView
+                    android:textSize="@dimen/extraSmallText"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:id="@+id/signerCount"
+                    android:text="10"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/round_orange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="gone"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginLeft="10dp"
+                android:id="@+id/constraintLayout15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style_secondary"
+                app:layout_constraintStart_toEndOf="@+id/profileImageLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/statusLayout"
+                    android:gravity="center"
+                    android:background="@drawable/pending_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textDone"
+                        android:text="pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/normalText" />
+
+                    <ImageView
+                        android:id="@+id/imagestatus"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_pending"
+                        app:layout_constraintTop_toTopOf="@+id/textComp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textComp"
+                        app:layout_constraintStart_toEndOf="@+id/textComp"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/starImg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/filled_star"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:textSize="@dimen/smallText"
+                    android:id="@+id/nameText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/john_doe"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout15"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout15"
+                    app:layout_constraintBottom_toTopOf="@+id/textDocName"/>
+
+                <TextView
+                    android:id="@+id/textDocName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Verify ID"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/extraSmallText"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout15"
+                    app:layout_constraintTop_toBottomOf="@+id/nameText"
+                    app:layout_constraintBottom_toTopOf="@+id/dateText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout15"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileImageLayout"
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="California"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/extraSmallText"/>
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/textPipe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text="|"
+                    app:layout_constraintStart_toEndOf="@+id/dateText"
+                    app:layout_constraintTop_toTopOf="@+id/dateText"
+                    app:layout_constraintBottom_toBottomOf="@+id/dateText"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/smallText"/>
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/sealText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_mono_bold"
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:text="Passport"
+                    android:textColor="@color/colorTextGray"
+                    android:textSize="@dimen/extraSmallText"
+                    app:layout_constraintStart_toEndOf="@+id/textPipe"
+                    app:layout_constraintTop_toTopOf="@+id/textPipe"
+                    app:layout_constraintBottom_toBottomOf="@+id/textPipe"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/iconsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/bottom_bg_dash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contentBody">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/profileRound"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_sky_dash"
+                    android:layout_margin="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/locationRound"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="29dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="9dp"
+                        android:src="@drawable/ic_person_dash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:id="@+id/profileNumTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_starred"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/extraSmallText" />
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/locationRound"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_sky_dash"
+                    android:layout_margin="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/documentRound"
+                    app:layout_constraintStart_toEndOf="@+id/profileRound"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="9dp"
+                        android:src="@drawable/ic_location_dash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/app_name" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/documentRound"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_sky_dash"
+                    android:layout_margin="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/phoneRound"
+                    app:layout_constraintStart_toEndOf="@+id/locationRound"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_doc_dash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/app_name" />
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/round_starred"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/emailNumTxtll">
+
+                        <TextView
+                            android:id="@+id/emailNumTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/extraSmallText"/>
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/phoneRound"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_sky_dash"
+                    android:layout_margin="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/documentRound"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_phone_dash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="@string/app_name" />
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/round_starred"
+                        tools:layout_editor_absoluteX="19dp"
+                        tools:layout_editor_absoluteY="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:id="@+id/phoneNumtxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/extraSmallText"/>
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/box"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp">
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/white_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/qnView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:textSize="@dimen/normalText"
+                android:id="@+id/question"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical"
+                android:letterSpacing=".05"
+                android:text="Question"
+                android:textColor="@color/colorBrightOrange"
+                tools:ignore="SpUsage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/questionPlay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/questionPlay"
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_play"
+                android:alpha="0.4"
+                app:layout_constraintBottom_toBottomOf="@+id/question"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/question"
+                app:layout_constraintTop_toTopOf="@+id/question" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:textSize="@dimen/normalText"
+            android:id="@+id/answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_vertical"
+            android:letterSpacing=".05"
+            android:text="Answer"
+            android:textColor="@color/colorTextGray"
+            tools:ignore="SpUsage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/qnView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/white_bg_bordered_report">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reportDate"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_report_grad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/reportHead">
+            <TextView
+                android:text="21"
+                android:textSize="@dimen/ts_head_text"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/reportDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/reportMonthYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jan, 2021"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reportDay"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reportHead"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toEndOf="@id/reportDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:textSize="@dimen/normalText"
+                android:layout_marginStart="20dp"
+                android:id="@+id/reportHeadName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="David Mclaughlin"
+                android:textColor="@color/colorGrey"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/reportId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="#128331"
+                android:textColor="@color/skyBlue"
+                app:layout_constraintRight_toLeftOf="@id/arrow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="20dp"/>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_down_ts"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reportHead2"
+            android:visibility="visible"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            app:layout_constraintStart_toEndOf="@id/reportDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reportHead">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorSubtleLightGray"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/centerGuide"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.3"/>
+
+            <TextView
+                android:id="@+id/reportTypeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:textStyle="bold"
+                android:textColor="@color/colorGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/reportRenewalText"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorGrey"
+                app:layout_constraintEnd_toEndOf="@id/centerGuide"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/textView2"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/reportType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly"
+                android:textColor="@color/colorGrey"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/centerGuide"
+                app:layout_constraintBottom_toTopOf="@+id/reportRenewalDate"/>
+
+            <TextView
+                android:id="@+id/reportRenewalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Renewal"
+                android:textColor="@color/colorBrightOrange"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reportTypeText"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorGrey"
+                app:layout_constraintEnd_toEndOf="@id/centerGuide"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/reportRenewalDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25th Jan. 2021"
+                android:textColor="@color/colorGrey"
+                app:layout_constraintTop_toBottomOf="@+id/reportType"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/centerGuide"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

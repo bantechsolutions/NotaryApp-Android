@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcomeContainer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <View
+            android:id="@+id/focus_view"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:ignore="MissingConstraints">
+
+        <requestFocus />
+        </View>
+        <TextView
+            android:textSize="@dimen/subHeadingText"
+            android:id="@+id/verifyHeadText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/great"
+            android:textColor="#ffffff"
+            tools:ignore="SpUsage"
+            android:visibility="gone"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/verifyHeadText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textSize="@dimen/subHeadingText"
+            android:id="@+id/verifyHeadText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/let_s_get_started"
+            android:textColor="#ffffff"
+            tools:ignore="SpUsage"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyHeadText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topSpaceContainer"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topSpaceContainer">
+
+
+        <androidx.appcompat.widget.SearchView
+            android:visibility="invisible"
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/search_box_dash"
+            android:queryHint="Search"
+            app:iconifiedByDefault="false"
+            app:searchIcon="@drawable/ic_search_dash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/warningContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/warning_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchContainer"
+        app:layout_constraintBottom_toTopOf="@id/mainScroll">
+        <ImageView
+            android:id="@+id/warningImg"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_warning"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/license_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/warningImg"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="0dp"
+        android:id="@+id/mainScroll"
+        android:visibility="visible"
+        android:animateLayoutChanges="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/paginationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/warningContainer">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/starredContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <!--android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"-->
+
+                    <TextView
+                        android:id="@+id/starredHeadText"
+                        android:layout_width="match_parent"
+                        android:background="@color/paleGray"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="2dp"
+                        android:paddingStart="20dp"
+                        android:fontFamily="@font/oswald_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/starred"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normalText"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/recyclerStarred"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerStarred"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:visibility="visible"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/starredHeadText" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="visible"
+                    android:id="@+id/sortContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/starredContainer"
+                    android:background="@color/paleGrey">
+
+
+                    <TextView
+                        android:textSize="@dimen/normalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/oswald_medium"
+                        android:gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/history"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:textSize="@dimen/normalText"
+                        android:id="@+id/tTypeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/oswald_medium"
+                        android:paddingStart="10dp"
+                        android:gravity="start|center"
+                        android:text="Latest"
+                        android:textColor="@color/black"
+                        tools:ignore="RtlSymmetry"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/filterDash"/>
+                    <Spinner
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/filterDash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorBlack"
+                        app:layout_constraintRight_toLeftOf="@id/sort"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:textSize="@dimen/normalText"
+                        android:id="@+id/sort"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/oswald_medium"
+                        android:paddingStart="10dp"
+                        android:gravity="start|center"
+                        android:text="Latest"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/sorticon"
+                        app:layout_constraintBottom_toBottomOf="@+id/sorticon"
+                        app:layout_constraintRight_toLeftOf="@+id/sorticon"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/sorticon"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/latest_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:contentDescription="@string/app_name" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    app:layout_constraintTop_toBottomOf="@+id/sortContainer"
+                    android:id="@+id/tabView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:visibility="gone"
+                        android:background="@color/colorTransparent"
+                        android:fontFamily="@font/roboto_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tabGravity="center"
+                        app:tabIndicatorColor="@color/colorPrimary"
+                        app:tabMode="auto"
+                        app:tabTextAppearance="@style/CustomTabText"
+                        app:tabTextColor="@color/white"/>
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPagerTabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="680dp"
+                        android:visibility="visible"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/paginationView"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@drawable/page_bottom"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            tools:ignore="SpUsage"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="@dimen/subHeadingText"
+            android:textColor="@color/skyBlue"
+            app:layout_constraintEnd_toStartOf="@+id/reset"
+            android:id="@+id/prev"
+            android:text="@string/prev"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            tools:ignore="SpUsage"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/reset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="@dimen/subHeadingText"
+            android:textColor="@color/colorBrightOrange"
+            android:id="@+id/reset"
+            android:gravity="center"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            tools:ignore="SpUsage"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/oswald_medium"
+            android:text="@string/next_page"
+            android:textSize="@dimen/subHeadingText"
+            app:layout_constraintStart_toEndOf="@+id/reset"
+            android:textColor="@color/skyBlue"
+            android:id="@+id/next"
+            android:gravity="center"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blurBox"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/blur_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:focusable="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floatV"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="50dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/floatL"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/floatV_click"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_style_white_dash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:textSize="@dimen/normalText"
+                android:id="@+id/validateText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textAlignment="gravity"
+                android:gravity="end"
+                android:letterSpacing=".06"
+                android:text="@string/validate_id"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:ignore="SpUsage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iconCircleV"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/iconCircleV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/round_orange_grad"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_verify_id"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/floatV_info_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_info"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floatL"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="50dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/floatN"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/floatL_click"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_style_white_dash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:textSize="@dimen/normalText"
+                android:id="@+id/lockadocText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textAlignment="gravity"
+                android:gravity="end"
+                android:letterSpacing=".06"
+                android:text="@string/lockadoc_id"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:ignore="SpUsage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iconCircleV1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/iconCircleV1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/round_purple_grad"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_lock_a_doc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/floatL_info_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_info"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floatN"
+        android:layout_width="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/floatR"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/floatN_click"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_style_white_dash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:textSize="@dimen/normalText"
+                android:id="@+id/notarizeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:letterSpacing=".06"
+                android:textAlignment="gravity"
+                android:gravity="end"
+                android:text="@string/skinny_ejournal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:ignore="SpUsage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iconCircleN"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/iconCircleN"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/round_blue_grad"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_NotaryApp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/floatN_info_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_info"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floatE"
+        android:layout_width="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/floatV"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/floatE_click"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_style_white_dash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iconCircleE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/eJournalText"
+                    android:textSize="@dimen/normalText"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="end"
+                    android:letterSpacing=".06"
+                    android:text="@string/ejournal"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/eJournalText1"
+                    android:layout_marginStart="2dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/smallText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start"
+                    android:text="@string/coming_soon"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/colorTextGray"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/iconCircleE"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/iconCircleE"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/round_green_grad"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_e_journal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/floatE_info_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_info"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/floatR"
+        android:layout_width="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/pulsator"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_style_white_dash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iconCircleR"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/ronText"
+                    android:textSize="@dimen/normalText"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="end"
+                    android:textStyle="bold"
+                    android:text="@string/ron_coming_soon"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/colorTextGray"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/ronText1"
+                    android:layout_marginStart="2dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/smallText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start"
+                    android:text="@string/coming_soon"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/colorTextGray"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/iconCircleR"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/iconCircleR"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/round_gray_dash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_ron_update"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+        android:id="@+id/pulsator"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="8dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:pulse_color="@color/colorPrimary"
+        app:pulse_count="6"
+        app:pulse_duration="5000"
+        app:pulse_interpolator="AccelerateDecelerate"
+        app:pulse_repeat="0"
+        app:pulse_startFromScratch="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fab"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/float_square">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

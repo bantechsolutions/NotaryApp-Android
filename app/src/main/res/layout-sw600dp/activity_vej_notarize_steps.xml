@@ -1,0 +1,2259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notarizeStepsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+
+    tools:context=".ui.activities.verifyauthenticate.NotarizeStepsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/footer_btn_bg"
+        android:gravity="bottom|center"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/bottomGuideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:background="@drawable/button_style_primary"
+            android:clickable="true"
+            app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:focusable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/update"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/buttonText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_pro_back"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginStart="@dimen/btnBackStart"
+            android:gravity="center"
+            android:background="@drawable/ic_person_white"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:fontFamily="@font/oswald_medium"
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/ejournal"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/headerText"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_pro_close"
+            app:layout_constraintStart_toEndOf="@+id/btn_pro_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_pro_close"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginEnd="@dimen/btnCloseEnd"
+            android:background="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topGuideline">
+
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/full_screen_card_margin"
+                android:layout_marginEnd="@dimen/full_screen_card_margin">
+
+                <LinearLayout
+                    android:layout_height="130dp"
+                    android:id="@id/firstView"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/white_bg_dash"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_margin="25dp">
+
+                        <TextView
+                            tools:ignore="SpUsage"
+                            android:id="@+id/infoText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:text="@string/NotaryApp_ejournal__dash_info"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/normalText"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/white_bg_dash"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/firstView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/verifySignersLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_bg_bordered_r">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_marginLeft="0dp"
+                                    android:id="@+id/imageBox2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/NotaryApp_1"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textBox2"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+
+                                        android:id="@+id/blueRound2"
+                                        android:layout_width="58dp"
+                                        android:layout_height="58dp"
+                                        android:background="@drawable/NotaryApp_1"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.533" />
+
+                                    <ImageView
+                                        android:id="@+id/icon2"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/ic_person_dash"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound2"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/blueRound2"
+                                        app:layout_constraintTop_toTopOf="@+id/blueRound2" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInfo1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/NotaryApp_info"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound2"
+                                        app:layout_constraintEnd_toEndOf="@+id/blueRound2"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/textBox2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/arrowBox2"
+                                    app:layout_constraintStart_toEndOf="@+id/imageBox2"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <TextView
+                                        android:id="@+id/verfifySigners"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/verify_signers"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/verify_card"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/arrowBox2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginRight="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textBox2"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/arrow2"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/ic_play"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHeaderSigners"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/white_bg_transparent"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/modBodySigners"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <ImageView
+                                android:id="@+id/signerTick"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_tik"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/signerText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                tools:ignore="SpUsage"
+                                android:id="@+id/signerText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:letterSpacing=".05"
+                                android:text="@string/verified_signers"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/verify_card"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/signerTick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modBodySigners"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modHeaderSigners">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerSigners"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/signDocsLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/white_bg_bordered_r">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/imageBox3"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textBox3"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/blueRound3"
+                                        android:layout_width="58dp"
+                                        android:layout_height="58dp"
+                                        android:background="@drawable/NotaryApp_2"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/icon3"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/ic_sign"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound3"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/blueRound3"
+                                        app:layout_constraintTop_toTopOf="@+id/blueRound3" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInfo2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/NotaryApp_info"
+                                        android:gravity="center"
+                                        android:text="i"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound3"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/textBox3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/arrowBox3"
+                                    app:layout_constraintStart_toEndOf="@+id/imageBox3"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <TextView
+                                        android:id="@+id/signDocuments"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:text="@string/sign_documents"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/darkBlueText"
+                                        android:textSize="@dimen/verify_card"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/arrowBox3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginRight="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textBox3"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/arrow3"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/ic_play"
+                                        android:textColor="#b4b1ac"
+                                        android:textSize="25sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/overlay1"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/veri_trans"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHeaderSignDocs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/white_bg_transparent"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <ImageView
+                                android:id="@+id/signDocsTick"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_tik"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/signDocsText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                tools:ignore="SpUsage"
+                                android:id="@+id/signDocsText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:layout_marginStart="10dp"
+                                android:letterSpacing=".05"
+                                android:text="@string/document_signed"
+                                android:textAllCaps="true"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/verify_card"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/signDocsTick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    ////
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/signatureThumbLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/white_bg_bordered_r">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/imageBox3_1"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textBox3_1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/redRound3_1"
+                                        android:layout_width="58dp"
+                                        android:layout_height="58dp"
+                                        android:background="@drawable/NotaryApp_6"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/icon3_1"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/ic_thumbprint_white"
+                                        app:layout_constraintBottom_toBottomOf="@+id/redRound3_1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/redRound3_1"
+                                        app:layout_constraintTop_toTopOf="@+id/redRound3_1" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInfo2_1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/NotaryApp_info"
+                                        android:gravity="center"
+                                        android:text="i"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="@+id/redRound3_1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                    <ImageView
+                                        android:id="@+id/imgWarning"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_warning"
+                                        android:visibility="gone"
+                                        android:gravity="center"
+                                        android:text="i"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintTop_toTopOf="@+id/redRound3_1"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/textBox3_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/arrowBox3_1"
+                                    app:layout_constraintStart_toEndOf="@+id/imageBox3_1"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <TextView
+                                        android:id="@+id/signatureAndThumb"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:text="@string/signature_thumbs"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/darkBlueText"
+                                        android:textSize="@dimen/verify_card"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/arrowBox3_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginRight="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textBox3_1"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/arrow3_1"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/ic_play"
+                                        android:textColor="#b4b1ac"
+                                        android:textSize="25sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/overlay1_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:visibility="visible"
+                                android:background="@color/veri_trans"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHeaderSignatureThumb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/white_bg_transparent"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <ImageView
+                                android:id="@+id/signatureThumbTick"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_tik"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/signDocsText_1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                tools:ignore="SpUsage"
+                                android:id="@+id/signDocsText_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:layout_marginStart="10dp"
+                                android:letterSpacing=".00"
+                                android:text="@string/signature_thumbprint_collected"
+                                android:textAllCaps="true"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/verify_card"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/signatureThumbTick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    ////
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/addSealLay"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            app:cardCornerRadius="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/white_bg_bordered_r">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/imageBox4"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textBox4"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/blueRound4"
+                                        android:layout_width="58dp"
+                                        android:layout_height="58dp"
+                                        android:background="@drawable/NotaryApp_3"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/icon4"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/doc_seal"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound4"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/blueRound4"
+                                        app:layout_constraintTop_toTopOf="@+id/blueRound4" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInfo3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/NotaryApp_info"
+                                        android:gravity="center"
+                                        android:text="i"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound4"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/textBox4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/arrowBox4"
+                                    app:layout_constraintStart_toEndOf="@+id/imageBox4"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <TextView
+                                        android:id="@+id/addSeal"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:text="@string/add_your_seal"
+                                        android:gravity="start"
+                                        android:layout_marginStart="20dp"
+                                        android:textColor="@color/darkBlueText"
+                                        android:textSize="@dimen/verify_card"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/arrowBox4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginRight="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textBox4"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/arrow4"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/ic_play"
+                                        android:textColor="#b4b1ac"
+                                        android:textSize="25sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/overlay2"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/veri_trans"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHeaderSeal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/white_bg_transparent"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/modBodySeal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/sealTick"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_tik"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/sealText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                tools:ignore="SpUsage"
+                                android:id="@+id/sealText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:letterSpacing=".05"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/seals_added"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/verify_card"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/sealEditIcon"
+                                app:layout_constraintStart_toEndOf="@+id/sealTick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/sealEditIcon"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_edit"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/sealText"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modBodySeal"
+                            android:visibility="gone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modHeaderSeal">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="130dp"
+                                android:layout_height="125dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:background="@drawable/white_bg_bordered"
+                                android:elevation="3dp"
+                                android:layout_gravity="center">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/sealBox"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="visible"
+                                    android:padding="2dp"
+                                    android:background="@drawable/round_img_steps"
+                                    app:layout_constraintBottom_toTopOf="@+id/licenseText"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ProgressBar
+                                        android:id="@+id/itemImageProgress"
+                                        android:layout_gravity="center"
+                                        android:background="@android:color/transparent"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:scaleType="centerCrop"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:indeterminateDrawable="@drawable/progress_indeterminate"
+                                        />
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/itemImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/ic_stamp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <!--                  <ImageView
+
+                                                      android:layout_width="60dp"
+                                                      android:layout_height="60dp"
+                                                      android:background="@drawable/ic_person"
+                                                      android:contentDescription="@string/app_name"
+                                                      android:visibility="invisible"
+                                                      app:layout_constraintBottom_toTopOf="@+id/licenseText"
+                                                      app:layout_constraintEnd_toEndOf="parent"
+                                                      app:layout_constraintStart_toStartOf="parent"
+                                                      app:layout_constraintTop_toTopOf="parent" />-->
+
+                                <TextView
+                                    tools:ignore="SpUsage"
+                                    android:id="@+id/licenseText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:letterSpacing=".05"
+                                    android:text="@string/license"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/smallText"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/sealBox" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/addDocsLay"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            app:cardCornerRadius="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/white_bg_bordered_r">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/imageBox5"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textBox5"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/blueRound5"
+                                        android:layout_width="58dp"
+                                        android:layout_height="58dp"
+                                        android:background="@drawable/NotaryApp_4"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/icon5"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/white_doc_2"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound5"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/blueRound5"
+                                        app:layout_constraintTop_toTopOf="@+id/blueRound5" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInfo4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/NotaryApp_info"
+                                        android:gravity="center"
+                                        android:text="i"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound5"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/textBox5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/arrowBox5"
+                                    app:layout_constraintStart_toEndOf="@+id/imageBox5"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <TextView
+                                        android:id="@+id/addDoc"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/lock_document"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/verify_card"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/arrowBox5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginRight="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textBox5"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/arrow5"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/ic_play"
+                                        android:textColor="#b4b1ac"
+                                        android:textSize="25sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/overlay3"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/veri_trans"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHeaderAddDocs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/white_bg_transparent"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/modBodyAddDocs"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/addDocsTick"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_tik"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/addDocsText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                tools:ignore="SpUsage"
+                                android:id="@+id/addDocsText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:letterSpacing=".05"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/documents_locked"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/verify_card"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/shareIcon"
+                                app:layout_constraintStart_toEndOf="@+id/addDocsTick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/shareIcon"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:contentDescription="@string/app_name"
+                                android:visibility="gone"
+                                android:src="@drawable/ic_share"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/addDocsText"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modBodyAddDocs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:padding="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modHeaderAddDocs">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerAddDocs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/addLocationLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/white_bg_bordered_r">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/imageBox6"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textBox6"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/blueRound6"
+                                        android:layout_width="58dp"
+                                        android:layout_height="58dp"
+                                        android:background="@drawable/NotaryApp_6"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/icon6"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/ic_location_dash"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound6"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/blueRound6"
+                                        app:layout_constraintTop_toTopOf="@+id/blueRound6" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInfo5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/NotaryApp_info"
+                                        android:gravity="center"
+                                        android:text="i"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound6"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/textBox6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/arrowBox6"
+                                    app:layout_constraintStart_toEndOf="@+id/imageBox6"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <TextView
+                                        android:id="@+id/location"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/confirm_location"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/verify_card"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/arrowBox6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginRight="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textBox6"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/arrow6"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/ic_play"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/overlay4"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/veri_trans"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHeaderLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            android:background="@drawable/white_bg_transparent"
+                            app:layout_constraintBottom_toTopOf="@+id/modBodyLocation"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/locationTick"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_tik"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/locationText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                tools:ignore="SpUsage"
+                                android:id="@+id/locationText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:letterSpacing=".05"
+                                android:text="@string/location_added"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/verify_card"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/locationEditIcon"
+                                app:layout_constraintStart_toEndOf="@+id/locationTick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/locationEditIcon"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_edit"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/locationText"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modBodyLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modHeaderLocation">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/locCardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="20dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:background="@drawable/white_bg_bordered">
+
+                                    <TextView
+                                        tools:ignore="SpUsage"
+                                        android:id="@+id/addressText"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:layout_marginEnd="10dp"
+                                        android:text="@string/address_loc"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toTopOf="@id/loc"
+                                        app:layout_constraintEnd_toStartOf="@id/locationMap"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        tools:ignore="SpUsage"
+                                        android:id="@+id/loc"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/locationMap"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/addressText" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:id="@+id/locationMap"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="10dp"
+                                        android:background="@drawable/map_bg_transparent"
+                                        app:layout_constraintBottom_toBottomOf="@id/loc"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@id/loc"
+                                        app:layout_constraintTop_toTopOf="@id/addressText">
+
+                                        <fragment
+                                            android:id="@+id/map"
+                                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--<androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHash"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modBodyLocation">
+
+                            <Button
+                                android:layout_margin="2dp"
+                                android:id="@+id/btnBlockChain"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/buttonHeight"
+                                android:background="@drawable/done_bg"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="@string/verify_in_blockchain"
+                                android:textAllCaps="true"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/buttonText"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/addJournalLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/white_bg_bordered_r">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/imageBox7"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textBox7"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/blueRound7"
+                                        android:layout_width="58dp"
+                                        android:layout_height="58dp"
+                                        android:background="@drawable/NotaryApp_7"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/icon7"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/ic_e_journal"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound7"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/blueRound7"
+                                        app:layout_constraintTop_toTopOf="@+id/blueRound7" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInfo6"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/NotaryApp_info"
+                                        android:gravity="center"
+                                        android:text="i"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound7"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/textBox7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/arrowBox7"
+                                    app:layout_constraintStart_toEndOf="@+id/imageBox7"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <TextView
+                                        android:id="@+id/journal"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/complete_journal"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/verify_card"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/arrowBox7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginRight="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textBox7"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/arrow7"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/ic_play"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/overlay5"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/veri_trans"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHeaderJournal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            android:background="@drawable/white_bg_transparent"
+                            app:layout_constraintBottom_toTopOf="@+id/modBodyJournal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/journalTick"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_tik"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/journalText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                tools:ignore="SpUsage"
+                                android:id="@+id/journalText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:letterSpacing=".05"
+                                android:text="@string/journal_completed"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/verify_card"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/journalEditIcon"
+                                app:layout_constraintStart_toEndOf="@+id/journalTick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/journalEditIcon"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_edit"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/journalText"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modBodyJournal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modHeaderJournal">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/dollarBox"
+                                android:layout_width="130dp"
+                                android:layout_height="125dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:background="@drawable/white_bg_bordered"
+                                android:elevation="3dp"
+                                android:layout_gravity="center">
+
+                                <!--<androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/sealBox"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:visibility="visible"
+                                    android:padding="2dp"
+                                    android:background="@drawable/round_img_steps"
+                                    app:layout_constraintBottom_toTopOf="@+id/licenseText"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ProgressBar
+                                        android:id="@+id/itemImageProgress"
+                                        android:layout_gravity="center"
+                                        android:background="@android:color/transparent"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:scaleType="centerCrop"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:indeterminateDrawable="@drawable/progress_indeterminate"
+                                        />
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/itemImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/ic_stamp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/journalCardLay"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toTopOf="@+id/notaTypeTxt"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+                                    <ImageView
+                                        android:id="@+id/dollarIconBack"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:src="@drawable/NotaryApp_6"
+                                        android:contentDescription="@string/app_name"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <ImageView
+                                        android:id="@+id/dollarIcon"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/ic_e_journal"
+                                        android:contentDescription="@string/app_name"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <TextView
+                                    tools:ignore="SpUsage"
+                                    android:id="@+id/notaTypeTxt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:letterSpacing=".05"
+                                    android:text="########"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/smallText"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/journalCardLay" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/journalFeesText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:text="@string/journal_fees"
+                                android:textColor="@color/colorBlack"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textStyle="bold"
+                                android:gravity="bottom"
+                                android:textSize="@dimen/normalText"
+                                android:paddingBottom="@dimen/padding_10"
+                                android:layout_marginLeft="@dimen/padding_10"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/dollarBox"
+                                app:layout_constraintBottom_toTopOf="@+id/amountLay"/>
+
+                            <RelativeLayout
+                                android:id="@+id/amountLay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="@dimen/padding_10"
+                                app:layout_constraintTop_toBottomOf="@id/journalFeesText"
+                                app:layout_constraintStart_toEndOf="@id/dollarBox"
+                                app:layout_constraintBottom_toBottomOf="parent">
+                                <TextView
+                                    android:id="@+id/journalFeesDollerIcon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$"
+                                    android:textColor="@color/journal_fees"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginRight="2dp"
+                                    android:textSize="@dimen/normalText" />
+
+                                <TextView
+                                    android:id="@+id/journalFees"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/journal_fees"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/mainText"
+                                    android:layout_toRightOf="@id/journalFeesDollerIcon"/>
+                                <TextView
+                                    android:id="@+id/journalFeesFrac"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="."
+                                    android:maxLength="3"
+                                    android:textColor="@color/journal_fees"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/normalText"
+                                    android:layout_toRightOf="@id/journalFees"/>
+
+                            </RelativeLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--<androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHash"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modBodyJournal">
+
+                            <Button
+                                android:layout_margin="2dp"
+                                android:id="@+id/btnBlockChain"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/buttonHeight"
+                                android:background="@drawable/done_bg"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="@string/verify_in_blockchain"
+                                android:textAllCaps="true"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/buttonText"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/addNoteLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/white_bg_bordered_r">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/imageBox8"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textBox8"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/blueRound8"
+                                        android:layout_width="58dp"
+                                        android:layout_height="58dp"
+                                        android:background="@drawable/NotaryApp_5"
+                                        android:contentDescription="@string/app_name"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/icon8"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:src="@drawable/ic_note"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound8"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/blueRound8"
+                                        app:layout_constraintTop_toTopOf="@+id/blueRound8" />
+
+                                    <ImageView
+                                        android:id="@+id/imgInfo7"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/NotaryApp_info"
+                                        android:gravity="center"
+                                        android:text="i"
+                                        android:textSize="@dimen/normalText"
+                                        app:layout_constraintBottom_toBottomOf="@+id/blueRound8"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/textBox8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/arrowBox8"
+                                    app:layout_constraintStart_toEndOf="@+id/imageBox8"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <TextView
+                                        android:id="@+id/note"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:gravity="start"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/add_notes_optional"
+                                        android:textAlignment="gravity"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/verify_card"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/arrowBox8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginRight="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textBox8"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/arrow8"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/ic_play"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/overlay6"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/veri_trans"
+                                android:clickable="true"
+                                android:focusable="true" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHeaderNote"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            android:background="@drawable/white_bg_transparent"
+                            app:layout_constraintBottom_toTopOf="@+id/modBodyNote"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/noteTick"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_tik"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/noteText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                tools:ignore="SpUsage"
+                                android:id="@+id/noteText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:letterSpacing=".05"
+                                android:text="@string/note_added"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/verify_card"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/noteEditIcon"
+                                app:layout_constraintStart_toEndOf="@+id/noteTick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/noteEditIcon"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_edit"
+                                android:gravity="center_vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/noteText"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modBodyNote"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintBottom_toBottomOf="@id/modHash"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modHeaderNote">
+
+                            <TextView
+                                android:id="@+id/noteHeadingText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Heading"
+                                android:textSize="@dimen/headerText"
+                                android:fontFamily="@font/roboto_mono_bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/noteSubText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/lad_alert"
+                                android:textSize="@dimen/smallText"
+                                android:maxLines="3"
+                                android:fontFamily="@font/roboto_regular"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/noteHeadingText"/>
+
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/modHash"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/modBodyNote">
+
+                            <Button
+                                android:layout_margin="2dp"
+                                android:id="@+id/btnBlockChain"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/buttonHeight"
+                                android:background="@drawable/done_bg"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="@string/verify_in_blockchain"
+                                android:textAllCaps="true"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/buttonText"
+                                app:layout_constraintBottom_toTopOf="@id/btnPrintJournal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/btnPrintJournal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/buttonHeight"
+                                android:background="@drawable/print_journal_bg"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:layout_marginTop="20dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="@string/print_journal"
+                                android:textAllCaps="true"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/buttonText"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/btnBlockChain" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:fontFamily="@font/roboto_regular"
+    android:textAlignment="textStart"
+    android:paddingEnd="10dp"
+    android:gravity="center_vertical|start"
+    android:textColor="#000"
+    android:paddingStart="20dp"
+    android:textSize="@dimen/smallText"
+    tools:ignore="SpUsage" />
+

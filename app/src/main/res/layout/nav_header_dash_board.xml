@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorDrawerSubBg"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/fab_margin"
+    android:paddingTop="@dimen/fab_margin"
+    tools:ignore="RtlSymmetry">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/logo"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="2dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/txt_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/img_profile_progress"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:indeterminateDrawable="@drawable/progress_indeterminate"
+        />
+
+    <TextView
+        android:textSize="@dimen/normalText"
+        android:id="@+id/txt_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/oswald_medium"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        tools:ignore="SpUsage"
+        app:layout_constraintBottom_toTopOf="@+id/userDrawerEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_profile" />
+
+    <ImageView
+        android:id="@+id/badge"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_guard"
+        app:layout_constraintBottom_toBottomOf="@+id/img_profile"
+        app:layout_constraintEnd_toEndOf="@+id/img_profile"
+        app:layout_constraintStart_toEndOf="@+id/img_profile"
+        app:layout_constraintTop_toTopOf="@+id/img_profile"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        tools:ignore="SpUsage"
+        android:id="@+id/userDrawerEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oswald_medium"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/colorTextGray"
+        android:visibility="visible"
+        android:textSize="@dimen/smallText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_profile" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/logoutCLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logoutImg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_logout"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="@dimen/normalText"
+            android:textStyle="bold"
+            android:textColor="@color/colorBrightOrange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/logoutImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="5dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

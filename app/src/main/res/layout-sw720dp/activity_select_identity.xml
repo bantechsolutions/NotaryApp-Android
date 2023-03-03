@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/membershipActivityViewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.notaryapp.ui.activities.onboarding.SelectIdentityActivity">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/oswald_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/setup_1_2"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/headerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/mainHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oswald_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/verify_your_identity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/headerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
+
+    <Button
+        android:id="@+id/btn_verify_back"
+        android:layout_width="@dimen/btnCloseBackSize"
+        android:layout_height="@dimen/btnCloseBackSize"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/btnCloseEnd"
+        android:background="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainHead">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/body">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/button_style_secondary"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/button_style_tertiary"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_style_tertiary"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="@dimen/full_screen_form_card_width"
+            android:layout_marginEnd="@dimen/full_screen_form_card_width"
+            android:layout_marginBottom="40dp"
+            android:paddingBottom="50dp"
+            android:paddingTop="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/white_bg_dash">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:textSize="@dimen/mainText"
+                    android:id="@+id/header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="@string/select_id"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintBottom_toTopOf="@id/subHead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/subHead"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start"
+                    android:text="@string/text_sub_head"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/normalText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header" />
+
+                <Button
+                    android:id="@+id/question_btn"
+                    android:text="@string/qw"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ic_info_question"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="0"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintStart_toStartOf="@+id/docSpins"
+                    app:layout_constraintTop_toBottomOf="@+id/subHead"
+                    app:layout_constraintEnd_toEndOf="@+id/docSpins"
+                    />
+
+                <TextView
+                    android:textSize="@dimen/subHeadingText"
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="@string/why_we_need_your_id"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/docSpins"
+                    app:layout_constraintStart_toStartOf="@+id/docSpins"
+                    app:layout_constraintTop_toBottomOf="@+id/question_btn" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/watch_now_cLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_style_primary"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp">
+                        <TextView
+                            android:id="@+id/watch_now_text"
+                            android:textSize="@dimen/subHeadingText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/watch_now"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/oswald_medium"
+                            android:layout_marginEnd="5dp"/>
+                        <ImageView
+                            android:id="@+id/watch_now_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/watch_now_btn"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="5dp"/>
+
+                    </LinearLayout>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:textSize="@dimen/subHeadingText"
+                    android:id="@+id/textView7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="@string/select_id_type"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/docSpins"
+                    app:layout_constraintTop_toBottomOf="@+id/watch_now_cLayout" />
+
+                <ImageView
+                    android:id="@+id/infoIcon"
+                    android:layout_width="@dimen/infoheight"
+                    android:layout_height="@dimen/infoheight"
+                    android:background="@drawable/ic_info"
+                    android:textSize="@dimen/normalText"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                    app:layout_constraintEnd_toEndOf="@+id/docSpins"
+                    app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/docSpins"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/paleGray"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" >
+                    <Spinner
+                        android:id="@+id/identityType"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/spinner_background"
+                        android:entries="@array/identityType"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white_trans"
+            android:gravity="bottom|center"
+            app:layout_constraintTop_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <Button
+                android:id="@+id/btn_verify_Start"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+                android:layout_marginStart="50dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_style_secondary"
+                android:text="@string/continu"
+                android:textAllCaps="true"
+                android:textColor="#fff"
+                android:textSize="@dimen/buttonText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

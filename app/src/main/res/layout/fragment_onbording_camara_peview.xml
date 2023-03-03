@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/headingBold"
+    tools:context=".ui.fragments.verifyauthenticate.verifysigner.personallyknown.Notarize_SignerPersonalPreviewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/ic_flat_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginEnd="@dimen/btnCloseEnd"
+            android:background="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:fontFamily="@font/oswald_medium"
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="@string/profile_picture"
+            android:textColor="@color/white"
+            android:textSize="@dimen/headerText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_close"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginStart="@dimen/btnBackStart"
+            android:background="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/preview_background"
+        android:scaleType="fitCenter"
+        android:src="@drawable/button_background"
+        app:layout_constraintBottom_toTopOf="@+id/footerbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerView">
+
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/footerbtn"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/footer_btn_bg"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_style_primary"
+            android:clickable="true"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/buttonText">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_style_primary"
+            android:clickable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/text_ok"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonText">
+
+        </Button>
+
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

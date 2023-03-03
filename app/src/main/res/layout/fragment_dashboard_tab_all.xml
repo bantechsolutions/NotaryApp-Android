@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        shimmer:duration="800">
+
+        <!-- Adding 3 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_placeholder_row" />
+
+            <include layout="@layout/layout_placeholder_row" />
+
+            <include layout="@layout/layout_placeholder_row" />
+
+            <include layout="@layout/layout_placeholder_row" />
+
+            <include layout="@layout/layout_placeholder_row" />
+
+            <include layout="@layout/layout_placeholder_row" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <RelativeLayout
+        android:id="@+id/allTabViewHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/notaryapp_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/notaryapp_icon_white"
+            shimmer:ignore="ContentDescription" />
+        <TextView
+                android:textSize="@dimen/subHeadingText"
+                android:id="@+id/verifyHeadText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/great"
+                android:textColor="#ffffff"
+                tools:ignore="SpUsage"
+                android:visibility="visible"
+                android:textStyle="bold"
+            android:layout_below="@+id/notaryapp_icon"
+            android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:textSize="@dimen/subHeadingText"
+                android:id="@+id/verifyHeadText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/let_s_get_started"
+                android:textColor="#ffffff"
+                tools:ignore="SpUsage"
+                android:textStyle="bold"
+                android:layout_below="@id/verifyHeadText"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/normalText"
+            android:id="@+id/verifyHeadText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/dash_sub_head"
+            android:textColor="#ffffff"
+            tools:ignore="SpUsage"
+            android:textStyle="bold"
+            android:layout_below="@id/verifyHeadText2"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewAll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/paginationView"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/page_bottom"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/prev"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/oswald_medium"
+            android:gravity="center"
+            android:text="@string/prev"
+            android:textColor="@color/skyBlue"
+            android:textSize="@dimen/subHeadingText"
+            app:layout_constraintEnd_toStartOf="@+id/reset"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/reset"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oswald_medium"
+            android:gravity="center"
+            android:text="@string/reset"
+            android:textColor="@color/colorBrightOrange"
+            android:textSize="@dimen/subHeadingText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oswald_medium"
+            android:gravity="center"
+            android:text="@string/next_page"
+            android:textColor="@color/skyBlue"
+            android:textSize="@dimen/subHeadingText"
+            app:layout_constraintStart_toEndOf="@+id/reset"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="5dp"
+            app:cardElevation="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/padding_10"
+                android:layout_marginBottom="@dimen/padding_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/itemImageContainer"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/round_img_steps"
+                    android:padding="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/itemImage"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ProgressBar
+                        android:id="@+id/itemImageProgress"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/app_name"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:indeterminateDrawable="@drawable/progress_indeterminate"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/signerNameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="John Doe"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/smallText"
+                    android:layout_marginStart="@dimen/padding_10"
+                    app:layout_constraintStart_toEndOf="@+id/itemImageContainer"
+                    app:layout_constraintBottom_toTopOf="@id/signerCityTxt"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:id="@+id/signerCityTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Altoona"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/smallText"
+                    app:layout_constraintStart_toEndOf="@id/itemImageContainer"
+                    android:layout_marginStart="@dimen/padding_10"
+                    app:layout_constraintBottom_toTopOf="@id/signerStateTxt"
+                    app:layout_constraintTop_toBottomOf="@id/signerNameTxt"/>
+
+                <TextView
+                    android:id="@+id/signerStateTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Pennsylvania"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/smallText"
+                    app:layout_constraintStart_toEndOf="@id/itemImageContainer"
+                    android:layout_marginStart="@dimen/padding_10"
+                    app:layout_constraintTop_toBottomOf="@id/signerCityTxt"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/thumprintImg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:src="@drawable/ic_thumbprint_blue_round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/overlay_thumb"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:visibility="visible"
+                    android:background="@color/veri_trans"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/penImg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:src="@drawable/ic_pen_blue_round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/thumprintImg"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/overlay_png"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:visibility="visible"
+                    android:background="@color/veri_trans"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/thumprintImg"/>
+
+                <Button
+                    android:id="@+id/statusBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:text="Not Collected"
+                    android:textSize="@dimen/extraSmallText"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:clickable="false"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:background="@drawable/button_style_primary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/imageVerified"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_idv_e"
+                tools:ignore="ContentDescription" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

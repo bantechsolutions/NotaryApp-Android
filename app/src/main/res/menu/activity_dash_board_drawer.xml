@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Transaction Log" />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_addlicense"
+
+            android:title="Add License" />
+    </group>
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_addstamp"
+
+            android:title="Add Stamp" />
+    </group>
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_validateprofile"
+
+            android:title="My Profile" />
+    </group>
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_membership"
+
+            android:title="Membership" />
+        <item
+            android:id="@+id/nav_order"
+
+            android:title="Membership" />
+        <item
+            android:id="@+id/nav_paymentsettings"
+
+            android:title="Membership" />
+    </group>
+    <group
+        android:id="@+id/group6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_help"
+            android:title="Help Support"></item>
+    </group>
+    <group
+        android:id="@+id/group7"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_faq"
+            android:title="FAQ"></item>
+    </group>
+    <group
+        android:id="@+id/group8"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+
+            android:title="Logout" />
+    </group>
+
+    <group
+        android:id="@+id/group9"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout1"
+            android:title=""></item>
+    </group>
+
+</menu>
+    <!--            android:icon="@drawable/ic_menu_logout"-->
+    <!--            android:icon="@drawable/ic_menu_profile"-->
+    <!--            android:icon="@drawable/ic_menu_stamp"-->
+    <!--            android:icon="@drawable/ic_menu_profile"-->
+    <!--            android:icon="@drawable/ic_menu_home"-->
+
+    <!--    android:icon="@drawable/ic_menu_send"-->
+    <!--    android:icon="@drawable/ic_menu_share"-->
+    <!--    android:icon="@drawable/ic_menu_manage"-->
+    <!--    android:icon="@drawable/ic_menu_send"-->
+    <!--    android:icon="@drawable/ic_menu_camera"-->
+    <!--    android:icon="@drawable/ic_menu_gallery"-->
+    <!--    android:icon="@drawable/ic_menu_slideshow"-->

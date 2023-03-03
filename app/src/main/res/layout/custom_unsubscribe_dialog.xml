@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_max="400dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp">
+
+                    <Button
+                        android:id="@+id/btn_close"
+                        android:layout_width="@dimen/btnCloseBackSize"
+                        android:layout_height="@dimen/btnCloseBackSize"
+                        android:background="@drawable/ic_close_bright_orange"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:textSize="@dimen/headerText"
+                        android:id="@+id/textHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/oswald_medium"
+                        android:text="@string/are_you_sure"
+                        android:layout_marginTop="35dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:textSize="@dimen/normalText"
+                        android:id="@+id/alertMess"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/are_you_sure_you_want"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorGrey"
+                        app:layout_constraintBottom_toTopOf="@+id/btnUnregister"
+                        app:layout_constraintTop_toBottomOf="@+id/textHead"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/btnUnregister"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginEnd="44dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/button_style_primary"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/unregister"
+                        android:textAllCaps="true"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/buttonText"
+                        app:layout_constraintTop_toBottomOf="@id/alertMess"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnDeactive"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginEnd="44dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/button_style_primary_white"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/deactivate"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBrightOrange"
+                android:textSize="@dimen/buttonText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

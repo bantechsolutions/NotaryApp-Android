@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.notaryapp.ui.activities.DashBoardActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/colorTransparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--android:background="@drawable/dash_action_bar"-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/nav_side_menu"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:contentDescription="@string/notaryapp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/planHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageProfile"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:visibility="visible"
+                        android:src="@drawable/silver_crown"
+                        app:layout_constraintBottom_toBottomOf="@+id/crownCircle"
+                        app:layout_constraintEnd_toEndOf="@+id/crownCircle"
+                        app:layout_constraintStart_toStartOf="@+id/crownCircle"
+                        app:layout_constraintTop_toTopOf="@+id/crownCircle"
+                        android:elevation="10dp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:visibility="visible"
+                        android:background="@drawable/button_style_primary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="20dp"
+                            android:layout_height="14dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/silver_crown"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/daysLeft"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/daysLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:paddingEnd="35dp"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/smallText"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView10"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpUsage" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.notaryapp.utils.rounded_imageView.RoundedImageView
+                        android:id="@+id/crownCircle"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@color/white"
+                        android:padding="0dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:riv_border_color="@color/white"
+                        app:riv_border_width="1dp"
+                        app:riv_corner_radius="23dip"
+                        app:riv_mutate_background="true"
+                        app:riv_oval="true" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+    android:id="@+id/include"
+    layout="@layout/content_dash_board"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

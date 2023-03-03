@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.forgotpassword.ForgotPassword_SuccessFragment">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+
+    <TextView
+        android:id="@+id/textMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oswald_medium"
+        android:gravity="center"
+        android:text="@string/updatepwd"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"/>
+
+    <ImageView
+        android:id="@+id/emailSend"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_tik_whitebg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/footer_btn_bg"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnContinueLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/button_style_primary"
+            android:clickable="true"
+            android:text="@string/continuelogin"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/buttonText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+<!--    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/footer_btn_bg"
+        android:gravity="bottom|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/btnContinueLogin"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:background="@drawable/button_style_primary"
+            android:text="@string/continuelogin"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias=".5">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "257183356545",
+    "project_id": "notaryapp-273710",
+    "storage_bucket": "notaryapp-273710.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257183356545:android:d164baf6cfca5745e35f80",
+        "android_client_info": {
+          "package_name": "com.notaryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257183356545-84uujq5h04lhoq33djoh1j5ptsi7n6bh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVPL6Jy8m09FGHqsc_UbsPGg8Av4WLrLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257183356545-84uujq5h04lhoq33djoh1j5ptsi7n6bh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257183356545-918kj4efmhts4btie8pg843f82k2rr5g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.org.notaryappDataSol.NotaryAppApp",
+                "app_store_id": "1520024983"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

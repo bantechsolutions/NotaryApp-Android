@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+
+    tools:context=".ui.activities.onboarding.NotaryPledgeActivity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:fontFamily="@font/oswald_medium"
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/pledge"
+            android:textColor="@color/white"
+            android:textSize="@dimen/headerText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_pledge_close"
+            app:layout_constraintStart_toEndOf="@+id/btn_pledge_back"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btn_pledge_back"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginStart="@dimen/btnBackStart"
+            android:background="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <Button
+            android:id="@+id/btn_pledge_close"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginEnd="@dimen/btnCloseEnd"
+            android:background="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottomGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/topGuideline">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintWidth_max="@dimen/full_screen_card_width_tab_land"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="25dp">
+
+                    <TextView
+                        android:textSize="@dimen/mainText"
+                        android:id="@+id/stamptext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:gravity="center"
+                        android:text="@string/pledge"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toTopOf="@id/txtMain"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/headTextMargin"
+                        android:text="@string/pledge_record"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="@dimen/normalText"
+                        android:fontFamily="@font/roboto_regular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/stamptext"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:id="@+id/checkBox"
+                android:scaleX="3.5"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:theme="@style/notaryappCheckbox"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normalText"
+                android:scaleY="3.5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+       <!-- <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:theme="@style/notaryappCheckbox"
+            android:visibility="visible"
+            android:scaleX="2.5"
+            android:scaleY="2.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/subHead" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footerbtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/footer_transparent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/bottomGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+            android:background="@drawable/button_style_primary"
+            android:clickable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

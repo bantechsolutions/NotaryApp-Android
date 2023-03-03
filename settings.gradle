@@ -1,0 +1,8 @@
+//include ':app' , ':library'
+rootProject.name='notaryapp'
+include ':app', ':documentscanner', ':openCVLibrary'
+//include ':app', ':scanlibrary'
+
+
+
+

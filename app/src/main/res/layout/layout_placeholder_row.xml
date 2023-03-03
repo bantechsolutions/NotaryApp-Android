@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_padding"
+    android:background="@drawable/white_bg_dash"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <View
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/placeholder_image"
+        android:layout_height="@dimen/placeholder_image"
+        android:layout_marginEnd="@dimen/activity_padding"
+        android:background="@color/placeholder_bg" />
+
+    <View
+        android:id="@+id/name"
+        android:layout_width="150dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/thumbnail"
+        android:background="@color/placeholder_bg" />
+
+    <View
+        android:id="@+id/name1"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/placeholder_text_height"
+        android:layout_below="@id/name"
+        android:layout_toEndOf="@id/thumbnail"
+        android:background="@color/placeholder_bg" />
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="@dimen/placeholder_text_height"
+        android:layout_below="@id/name1"
+        android:layout_toEndOf="@id/thumbnail"
+        android:background="@color/placeholder_bg"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

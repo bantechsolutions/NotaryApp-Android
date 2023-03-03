@@ -1,0 +1,393 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="splash" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <style name="notaryapp.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Material application theme. -->
+    <style name="DashTheme" parent="Theme.MaterialComponents">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
+
+    <style name="SpinnerTheme">
+        <item name="android:background">@drawable/customspinner</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="DashSpinnerTheme">
+        <item name="android:background">@drawable/latest_arrow</item>
+    </style>
+
+    <style name="SpinnerThemeLicense">
+        <item name="android:background">@drawable/custom_spinner_white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">15sp</item>
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="StrokeForText">
+        <item name="android:paddingLeft">4px</item>
+        <item name="android:paddingBottom">4px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:shadowColor">@color/colorBlack</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="HelperText">
+        <item name="android:paddingLeft">200dp</item>
+        <item name="android:paddingStart">200dp</item>
+        <item name="android:layout_marginStart">200dp</item>
+        <item name="android:layout_marginLeft">200dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+    </style>
+
+    <style name="ErrorText">
+        <item name="android:textColor">@color/colorRed</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="HintText">
+        <item name="android:textColorHint">@color/textInputHint</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="ShareHintText">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextInputLayoutAppearance">
+        <!-- reference our hint & error styles -->
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="ShareTextInputLayoutAppearance">
+        <!-- reference our hint & error styles -->
+        <item name="hintTextAppearance">@style/ShareHintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:textSize">@dimen/smallText</item>
+        <item name="android:listDivider">@drawable/list_divider</item>
+    </style>
+
+    <style name="Tooltip">
+        <item name="android:text">TESSSSSS</item>
+        <item name="android:textSize">15sp</item>
+        <item name="backgroundColor">@color/colorAccent</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/smallText</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <!--    JUMEO   -->
+
+    <!-- color variables -->
+
+     
+    <color name="CustomAndroidBackground">#ffffff</color>
+
+     <!-- base application theme -->
+
+     
+
+    <style name="CustomNetverifyTheme" parent="Theme.Netverify">
+
+          <!-- global colors -->
+
+          
+        <item name="colorPrimary">#1F3F72</item>
+          
+        <item name="colorPrimaryDark">#3052aa</item>
+          
+        <item name="colorControlNormal">#ffffff</item>
+          
+        <item name="jumio_toolbarStyle">@style/Jumio.Actionbar.Title</item>
+          
+        <item name="jumio_dialogNegativeButtonTextColor">#BDBDBD</item>
+          
+        <item name="jumio_dialogPositiveButtonTextColor">#1F3F72</item>
+          
+        <item name="jumio_shutterbutton_pressed">#1F3F72</item>
+          
+        <item name="jumio_shutterbutton_default">#000000</item>
+          
+        <item name="jumio_shutterbutton_background">#ffffff</item>
+          
+        <item name="android:windowBackground">@color/CustomAndroidBackground</item>
+          
+        <item name="editTextColor">#FFFFFF</item>
+          
+        <item name="android:editTextColor">#FFFFFF</item>
+
+          <!-- loading sdk specific colors -->
+
+          
+        <item name="netverify_scanOptionsLoadingProgress">#FFFFFF</item>
+          <!-- Replace the HEX color value above to change the loading progress color (SDK start)-->
+
+          <!-- select document specific colors -->
+
+          
+        <item name="netverify_scanOptionsLoadingBackground">#1F3F72</item>
+          
+        <item name="netverify_scanOptionsItemBackground">#1F3F72</item>
+          
+        <item name="netverify_scanOptionsItemForeground">#000000</item>
+          
+        <item name="netverify_scanOptionsItemHeaderBackground">#F2F2F2</item>
+
+          <!-- country selection specific colors -->
+
+          
+        <item name="netverify_countryListCountryName">#000000</item>
+          
+        <item name="netverify_countryListSeperator">#DDDDDD</item>
+
+          <!-- scan instructions specific colors -->
+
+          
+        <item name="netverify_helpBackground">#B33c66d4</item><!--70%-->
+          
+        <item name="netverify_helpProgressString">#80FFFFFF</item>
+          
+        <item name="netverify_helpTitle">#FFFFFF</item>
+          
+        <item name="netverify_helpImage">#FFFFFF</item>
+          
+        <item name="netverify_helpSeperator">#33FFFFFF</item>
+          
+        <item name="netverify_helpInstructions">#FFFFFF</item>
+          
+        <item name="netverify_helpFallback">#FFFFFF</item>
+          
+        <item name="netverify_helpFallbackText">#1F3F72</item>
+
+          <!-- scan document (scan screen) specific colors -->
+
+          
+        <item name="netverify_scanOverlay">#B3FFFFFF</item>
+          
+        <item name="netverify_scanOverlayFill">#66FFFFFF</item>
+          
+        <item name="netverify_scanBackground">#40000000</item><!--25%-->
+
+          <!-- 3d liveness specific colors -->
+
+         <!-- <item name="face_scanOverlayFeedbackText">#FFFFFF</item>
+      <item name="face_scanOverlayBackground">#1F3F72</item>&lt;!&ndash;100%&ndash;&gt;
+      <item name="face_scanOverlayFeedbackBackground">#f98e3e</item>
+      <item name="face_scanOverlayOval">#FFFFFF</item>
+      <item name="face_scanOverlayProgress">#f98e3e</item>
+      <item name="face_helpBackground">#B33c66d4</item>&lt;!&ndash;70%&ndash;&gt;
+      <item name="face_helpProgressString">#80FFFFFF</item>
+      <item name="face_helpImage">#FFFFFF</item>
+      <item name="face_helpTitle">#FFFFFF</item>
+      <item name="face_helpSeperator">#33FFFFFF</item>
+      <item name="face_helpInstructions">#FFFFFF</item>
+      <item name="face_helpFallback">#FFFFFF</item>
+      <item name="face_helpFallbackText">#1F3F72</item>
+      <item name="face_helpButtonTheme">@style/Netverify.Helpview.Button</item>-->
+
+          <!-- verification specific colors -->
+
+          
+        <item name="netverify_confirmationBackground">#1F3F72</item>
+          
+        <item name="netverify_confirmationHintStyle">@style/Custom.Netverify.Confirmation.Hint
+        </item>
+         <!-- <item name="netverify_confirmationPositiveStyle">@style/Netverify.Confirmation.MaterialButton</item>
+      <item name="netverify_confirmationNegativeStyle">@style/Netverify.Confirmation.MaterialButton.Outlined</item>-->
+          
+        <item name="netverify_confirmationIcon">#FFFFFF</item>
+
+          <!-- submission error (error screen) specific colors -->
+
+          
+        <item name="netverify_submissionErrorStatusBar">#B3B3B3</item>
+          
+        <item name="netverify_submissionErrorBackground">#E0E0E0</item>
+          
+        <item name="netverify_submissionErrorTitle">#424242</item>
+          
+        <item name="netverify_submissionErrorDescription">#757575</item>
+          
+        <item name="netverify_submissionErrorSeperator">#757575</item>
+          
+        <item name="netverify_submissionErrorImage">#FFFFFF</item>
+          
+        <item name="netverify_submissionErrorButtonBackground">#FFFFFF</item>
+          
+        <item name="netverify_submissionErrorButtonText">#222222</item>
+
+          <!-- submission success (success screen) specific colors -->
+
+          
+        <item name="netverify_submissionProgressSuccessTitle">#FFFFFF</item>
+          
+        <item name="netverify_submissionProgressSuccessDescription">#FFFFFF</item>
+          
+        <item name="netverify_submissionProgressSuccessSeperator">#FFFFFF</item>
+          
+        <item name="netverify_submissionProgressSuccessImage">#FFFFFF</item>
+          
+        <item name="netverify_submissionProgressSuccessBackground">#1F3F72</item>
+         
+    </style>
+
+     <!-- actionbar title color -->
+
+     
+
+    <style name="Jumio.Actionbar.Title" parent="ThemeOverlay.AppCompat">
+          
+        <item name="android:textColorPrimary">#ffffff</item>
+         
+    </style>
+
+     <!-- infobar title color -->
+
+     
+
+    <style name="Jumio.Infobar.Title" parent="@android:style/TextAppearance">
+          
+        <item name="android:textColor">#ffffff</item>
+         
+    </style>
+
+     <!-- positive button theme (verification screen) -->
+
+     
+
+    <style name="Netverify.Confirmation.MaterialButton" parent="Widget.MaterialComponents.Button">
+          
+        <item name="android:textColor">#FFFFFF</item>
+          
+        <item name="android:background">#f98e3e</item>
+          <!-- For API Level 21+ -->
+          
+        <item name="android:backgroundTint">#f98e3e</item>
+         
+    </style>
+
+     <!-- negative button theme (verification screen) -->
+
+    <!-- <style name="Netverify.Confirmation.MaterialButton.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+      <item name="android:textColor">#f98e3e</item>
+      <item name="strokeColor">#f98e3e</item>
+      &lt;!&ndash; For API Level 21+ &ndash;&gt;
+      <item name="android:strokeColor">#f98e3e</item>
+     </style>-->
+
+    <style name="Netverify.Confirmation.MaterialButton.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+          
+        <item name="android:textColor">#ffffff</item>
+          
+        <item name="strokeColor">#ffffff</item>
+          <!-- For API Level 21+ -->
+          
+        <item name="android:strokeColor">#ffffff</item>
+         
+    </style>
+
+
+     <!-- Verification info theme (verification screen) -->
+
+     
+
+    <style name="Custom.Netverify.Confirmation.Hint" parent="Netverify.Confirmation.Hint">
+          
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
+          
+        <item name="android:background">#1F3F72</item>
+          
+        <item name="android:textColor">#FFFFFF</item>
+         
+    </style>
+
+
+     <!-- authentication theme -->
+
+     
+
+    <style name="CustomAuthenticationTheme" parent="Theme.Authentication">
+          <!--<item name="face_helpBackground">#B33c66d4</item>&lt;!&ndash;70%&ndash;&gt;
+      <item name="face_helpProgressString">#80FFFFFF</item>
+      <item name="face_helpImage">#FFFFFF</item>
+      <item name="face_helpTitle">#FFFFFF</item>
+      <item name="face_helpSeperator">#33FFFFFF</item>
+      <item name="face_helpInstructions">#FFFFFF</item>
+      <item name="face_helpFallback">#FFFFFF</item>
+      <item name="face_helpFallbackText">#3c66d4</item>
+      <item name="face_helpButtonTheme">@style/Authentication.Helpview.Button</item>-->
+          
+        <item name="jumio_dialogNegativeButtonTextColor">#BDBDBD</item>
+          
+        <item name="jumio_dialogPositiveButtonTextColor">#3c66d4</item>
+          <!--<item name="face_scanOverlayFeedbackText">#FFFFFF</item>
+      <item name="face_scanOverlayBackground">#1F3F72</item>&lt;!&ndash;100%&ndash;&gt;
+      <item name="face_scanOverlayFeedbackBackground">#f98e3e</item>
+      <item name="face_scanOverlayOval">#FFFFFF</item>
+      <item name="face_scanOverlayProgress">#f98e3e</item>-->
+         
+    </style>
+
+    <style name="CustomProgressBarTheme">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:progressBarStyle">@style/Widget.AppCompat.ProgressBar.Horizontal</item>
+    </style>
+
+
+
+</resources>

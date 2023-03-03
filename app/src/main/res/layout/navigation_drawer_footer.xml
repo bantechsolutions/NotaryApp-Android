@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeBox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:textSize="@dimen/fabText"
+                android:id="@+id/homeDrawerText"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/home"
+                android:letterSpacing=".03"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorTextGray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/howToBox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:textSize="@dimen/fabText"
+                android:id="@+id/howToDrawerText"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/how_to_videos"
+                android:letterSpacing=".03"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorTextGray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profileBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/profileDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/profile"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/notaryappBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/notaryappText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/notaryapp"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tsPlay"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/tsPlay"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/ic_play"
+                    android:alpha="0.4"
+                    app:layout_constraintStart_toEndOf="@id/notaryappText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/app_name" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tsYourCodeBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/tsYourCodeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:letterSpacing=".03"
+                    android:padding="5dp"
+                    android:background="@drawable/drawer_sub_bg"
+                    android:text="@string/your_code"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/colorDrawerSubText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tsSalesDashBoardBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/tsSalesDashBoardText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:letterSpacing=".03"
+                    android:padding="5dp"
+                    android:background="@drawable/drawer_sub_bg"
+                    android:text="@string/sales_dashboard"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/colorDrawerSubText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tsDetailReportBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/tsDetailReportText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:letterSpacing=".03"
+                    android:padding="5dp"
+                    android:background="@drawable/drawer_sub_bg"
+                    android:text="@string/detailed_report"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/colorDrawerSubText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/eJournalBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/eJournalText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/ejournal"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/verifyBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/verifyText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/verify_id_new"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ladBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/ladText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/lock_a_doc"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                android:background="@color/colorSubtleLightGray"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/NotaryAppBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/NotaryAppText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/veri_lock"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="visible"
+                android:id="@+id/memBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/memHeadDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/membership"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/memPlay"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/memPlay"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/ic_play"
+                    android:alpha="0.4"
+                    app:layout_constraintStart_toEndOf="@id/memHeadDrawerText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/app_name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/memStatusBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/memDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:letterSpacing=".03"
+                    android:padding="5dp"
+                    android:background="@drawable/drawer_sub_bg"
+                    android:text="@string/membership_status"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/colorDrawerSubText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/memOrderBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/orderSubDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/drawer_sub_bg"
+                    android:gravity="center_vertical"
+                    android:letterSpacing=".03"
+                    android:padding="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/order_details"
+                    android:textColor="@color/colorDrawerSubText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.533" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/memPayBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/paymentDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:letterSpacing=".03"
+                    android:background="@drawable/drawer_sub_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/payment_settings"
+                    android:textColor="@color/colorDrawerSubText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regBox"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/regText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/registration"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/regPlay"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/regPlay"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/ic_play"
+                    android:alpha="0.4"
+                    app:layout_constraintStart_toEndOf="@id/regText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/app_name" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/licenseBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/licenseDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:letterSpacing=".03"
+                    android:background="@drawable/drawer_sub_bg"
+                    android:text="@string/add_commission"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textSize="@dimen/normalText"
+                    android:textColor="@color/colorDrawerSubText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stampBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/stampDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:letterSpacing=".03"
+                    android:background="@drawable/drawer_sub_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/add_seal"
+                    android:textColor="@color/colorDrawerSubText"
+                    android:textSize="@dimen/normalText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/faqBox"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/faqDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/faq"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/helpBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/helpDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/help_and_support"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/privacyBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/privacyDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/termsBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/termsDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/transBox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:textSize="@dimen/fabText"
+                android:id="@+id/transactionDrawerText"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/transaction_log"
+                android:textColor="@color/colorTextGray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/unsubscribeBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:textSize="@dimen/fabText"
+                    android:id="@+id/unsubscribeDrawerText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:letterSpacing=".03"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/unsubscribe"
+                    android:textColor="@color/colorTextGray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/logoutBox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:textSize="@dimen/fabText"
+                android:id="@+id/logoutDrawerText"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:letterSpacing=".03"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/logout"
+                android:textColor="@color/colorTextGray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorSubtleLightGray"/>
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

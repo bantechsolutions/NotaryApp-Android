@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+
+    tools:context=".ui.activities.verifyauthenticate.AddLocationActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_pro_back"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="24dp"
+            android:visibility="invisible"
+            android:background="@drawable/round_blue_back"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/head"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/head" />
+
+        <TextView
+            android:fontFamily="@font/oswald_medium"
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/veri_lock"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/headerText"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_pro_close"
+            app:layout_constraintStart_toEndOf="@+id/btn_pro_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_pro_close"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:visibility="invisible"
+            android:background="@drawable/round_white_close"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/head"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/head" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout10"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_max="@dimen/full_screen_card_width_tab_land"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:textSize="@dimen/mainText"
+                        android:id="@+id/contactDetail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:text="@string/veri_lock_complete"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        tools:ignore="SpUsage"
+                        app:layout_constraintBottom_toTopOf="@id/contactDetail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        tools:ignore="SpUsage"
+                        android:id="@+id/contactDetail2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notarize_complete_txt"
+                        android:textAlignment="gravity"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="@dimen/normalText"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/contactDetail"
+                        app:layout_constraintBottom_toTopOf="@id/llButton"/>
+
+                    <RelativeLayout
+                        android:id="@+id/llButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/contactDetail2"
+                        android:layout_marginTop="10dp">
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_tik"
+                            android:contentDescription="@string/app_name"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/contactDetail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_copy_client"
+            android:textAlignment="gravity"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normalText"
+            android:visibility="visible"
+            android:layout_below="@+id/llContent"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_style_primary_white"
+            android:clickable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/menu_share"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBrightOrange"
+            android:textSize="@dimen/buttonText"
+            android:layout_below="@+id/contactDetail3"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:id="@+id/ivInfoAlert"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_info_red"
+            android:contentDescription="@string/app_name"
+            android:layout_below="@+id/llContent"
+            android:layout_toRightOf="@id/contactDetail3"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/footer_btn_bg"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnCallsupportRetry"
+            android:layout_width="110dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_style_primary"
+            android:clickable="true"
+            android:text="@string/retry"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/normalText">
+
+        </Button>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/regRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/footer_btn_bg"
+        android:gravity="bottom|center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomGuideline">
+
+        <Button
+            android:id="@+id/btnLoadDash"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+            android:background="@drawable/button_style_primary"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="RETURN TO DASHBOARD"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/buttonText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--        <Button-->
+        <!--            android:id="@+id/submitBtn"-->
+        <!--            android:layout_width="130dp"-->
+        <!--            android:layout_height="@dimen/buttonHeight"-->
+        <!--            android:layout_marginBottom="30dp"-->
+        <!--            android:background="@drawable/button_style_primary"-->
+        <!--            android:clickable="true"-->
+        <!--            android:focusable="true"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="@string/confirm"-->
+        <!--            android:textAllCaps="true"-->
+        <!--            android:textColor="#fff"-->
+        <!--            android:textSize="@dimen/buttonText"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"/>-->
+
+        <!--        </Button>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

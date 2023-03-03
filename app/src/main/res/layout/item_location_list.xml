@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/box"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="15dp"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_dash">
+
+        <TextView
+            android:textSize="@dimen/normalText"
+            android:id="@+id/addressText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:text="@string/address_loc"
+            android:textAlignment="gravity"
+            android:textColor="@color/darkBlueText"
+            app:layout_constraintBottom_toTopOf="@id/loc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textSize="@dimen/normalText"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/loc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:text="ldjkhbsfjhba"
+            android:textAlignment="gravity"
+            android:textColor="@color/darkBlueText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addressText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

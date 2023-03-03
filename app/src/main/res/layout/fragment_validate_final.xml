@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".ui.fragments.validate_id.Validate_FinalFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#77000000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/topGuideline">
+
+        <TextView
+android:fontFamily="@font/oswald_medium"
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normalText"
+            android:gravity="center"
+
+            android:text="@string/textHeadValidate"
+            android:textColor="@color/white"
+            tools:ignore="SpUsage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_pro_close"
+            app:layout_constraintStart_toEndOf="@+id/btn_pro_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_pro_back"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:visibility="invisible"
+            android:background="@drawable/round_blue_back"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <Button
+            android:id="@+id/btn_pro_close"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:visibility="gone"
+            android:background="@drawable/round_white_close"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:visibility="invisible"
+        android:background="@drawable/round_white_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuideline">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/white_bg_dash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+            <TextView
+                android:textSize="@dimen/mainText"
+                android:id="@+id/textCaption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/id_verification_complete"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/oswald_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/contactDetail"/>
+
+            <TextView
+                android:id="@+id/contactDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/this_completes_the_id_verification"
+                android:layout_marginTop="@dimen/headTextMargin"
+                android:textAlignment="center"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/normalText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textCaption"
+                app:layout_constraintBottom_toTopOf="@id/contactDetail2"/>
+
+            <TextView
+                tools:ignore="SpUsage"
+                android:id="@+id/contactDetail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:text="Or"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normalText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contactDetail"/>
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="@dimen/headTextMargin"
+                android:src="@drawable/ic_tik_whitebg"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contactDetail" />
+
+
+            <Button
+                android:id="@+id/btncallSupport"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="31dp"
+                android:background="@drawable/button_style_primary"
+                android:clickable="true"
+                android:text="@string/menu_share"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textColor="#fff"
+                android:textSize="@dimen/normalText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/footer_transparent"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomGuideline"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnLoadDash"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/button_style_primary"
+            android:clickable="true"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="RETURN TO DASHBOARD"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnCallsupportRetry"-->
+        <!--            android:layout_width="110dp"-->
+        <!--            android:layout_height="42dp"-->
+        <!--            android:layout_marginEnd="20dp"-->
+        <!--            android:layout_marginRight="20dp"-->
+        <!--            android:background="@drawable/button_style_primary"-->
+        <!--            android:clickable="true"-->
+        <!--            android:text="@string/retry"-->
+        <!--            android:textAllCaps="true"-->
+        <!--            android:textColor="#fff"-->
+        <!--            android:textSize="@dimen/normalText">-->
+
+        <!--        </Button>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

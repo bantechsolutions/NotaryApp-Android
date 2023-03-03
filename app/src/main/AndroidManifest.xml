@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.notaryapp">
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="true" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.notaryapp.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.hardware.camera2.full" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+
+    <application
+        android:name="com.notaryapp.notaryappApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:logo="@mipmap/logo"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:supportsRtl,android:allowBackup">
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.PaymentFailedActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name="com.notaryapp.ui.activities.unsubscribe.UnsubscribeReasonActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.unsubscribe.UnsubscribeActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.youtubevideo.YoutubeVideoPlayActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.youtubevideo.YoutubeDashboardActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_DoneNotarizeActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_NoteActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_JournalEntryActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_SignAndThumbCameraPreviewActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_Notarize_SignatureScreenActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_SignAndThumbActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.fragments.selfie.govissuedid.VEJ_GovIssuedIdAddSelfieActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.fragments.selfie.crediblewitness.VEJ_CredibleWitnessAddSelfieActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_VAComplete"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_MapActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_EditProfileActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_AddSealActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_AddLocationActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_AddDocsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_EditProfileWitnessActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_SignDocsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_VerifySignerActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_NotarizeStepsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ejournal.activities.VEJ_Notarize_AlertActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.notaryappShareAppActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.BlockChainViewActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <activity
+            android:name="com.notaryapp.ui.activities.notaryappSplashActivity"
+            android:configChanges="orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.NotaryBaseActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.NotaryPledgeActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.NotaryStampActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.OnboardingBaseActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.ProfileActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.ProfileBaseActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.SelectIdentityActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.TermsAndService"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.PrivacyPolicy"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.VerifiedActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.onboarding.VerifyBaseActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.DashBoardActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.ValidateActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.MembershipActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.Notarize_AlertActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.SignDocsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.ShareActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.VerifySignerActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.NotarizeStepsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.MoreDetailsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.AddDocsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.AddSealActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.AddLocationActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.SealVideoActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.VAComplete"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.EditProfileActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.DoneNotarizeActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.CongratsMemberActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.VerificationAddedActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.PackageExpiredActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.OrderHistoryActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.OrderHistoryNewActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.OrderDetailsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.membership.PaymentSettingsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.fragments.membership.MembershipInvoiceActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.fragments.membership.Disclaimer"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.LicenseListActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.CompletedValidateProfile"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.DocumentPdfActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.MapActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.verifyauthenticate.EditProfileWitnessActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.fragments.dashboard.DashBoard_ProfileActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.fragments.dashboard.DashBoard_FAQActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.notaryapp.notaryappCouponActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.notaryapp.notaryappDashBoardActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.notaryapp.notaryappReportActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.notaryapp.notaryappReportDetailsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.fragments.dashboard.DashBoard_HelpActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.fragments.dashboard.DashBoard_NotaryStampActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.jumio.nv.NetverifyActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:hardwareAccelerated="true"
+            android:keepScreenOn="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="com.notaryapp.ui.activities.selfie.AddSelfieActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.selfie.govissuedid.GovIssuedIdAddSelfieActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.ui.activities.selfie.crediblewitness.CredibleWitnessAddSelfieActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.LADStepsActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.ScanDocumentActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.PhotographPartyDocumentActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.LADAddLocationActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.LADMapActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.LADShareActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.PhotographPartyActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.LADComplete"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+        <activity
+            android:name="com.notaryapp.lockadoc.activityes.LADEditProfileActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/notaryapp.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!--
+<meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.scanlibrary.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name="com.notaryapp.fbhelper.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+    </application>
+
+</manifest>

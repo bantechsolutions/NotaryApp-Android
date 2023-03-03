@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/white_bg_dash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:padding="4dp"
+            android:id="@+id/profileImageLayout"
+            android:background="@drawable/plans_head"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/contentBox"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:visibility="gone"
+                app:layout_constraintVertical_bias="0.3"
+                android:id="@+id/idcount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="100"
+                android:textSize="@dimen/membership_price"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/verification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Verification"
+                android:textSize="@dimen/smallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idcount" />
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/crownImage"
+                android:src="@drawable/crown_gold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/singleuse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="SINGLE USE"
+                android:textStyle="bold"
+                android:textSize="@dimen/mainText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/statusBox"
+            app:layout_constraintStart_toEndOf="@+id/profileImageLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:textSize="@dimen/headerText"
+                android:id="@+id/planName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_medium"
+                android:gravity="start"
+                android:text="NotaryApp Membership"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/orderIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start"
+                android:text="Order No. #123456789"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/normalText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/planName" />
+
+            <TextView
+                android:id="@+id/textDoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="start"
+                android:text="$30.99 |  Date: Mar 24, 2020"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/smallText"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/orderIdText" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="end"
+                android:text="2020-05-29"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/smallText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/orderIdText" />
+
+            <TextView
+                android:id="@+id/textPipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/normalText"
+                app:layout_constraintBottom_toBottomOf="@+id/dateText"
+                app:layout_constraintStart_toEndOf="@+id/dateText"
+                app:layout_constraintTop_toTopOf="@+id/dateText" />
+
+            <TextView
+                android:id="@+id/sealText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="end"
+                android:text="Passport"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/smallText"
+                app:layout_constraintBottom_toBottomOf="@+id/textPipe"
+                app:layout_constraintStart_toEndOf="@+id/textPipe"
+                app:layout_constraintTop_toTopOf="@+id/textPipe" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/statusBox"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/contentBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <ImageView
+                android:id="@+id/imageStatus"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_completed"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

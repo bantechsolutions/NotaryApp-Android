@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.notaryapp.ui.activities.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"
+
+        />
+
+    <fragment
+        android:id="@+id/nav_addlicense"
+        android:name="com.notaryapp.ui.fragments.DashBoard_AddLicenseFragment"
+        android:label="@string/menu_transaction"
+        tools:layout="@layout/fragment_dashboard_add_license_number" />
+
+    <fragment
+        android:id="@+id/nav_addstamp"
+        android:name="com.notaryapp.ui.fragments.DashBoard_NotaryStampFragment"
+        android:label="@string/menu_feature"
+        tools:layout="@layout/fragment_dashboard_add_license_number" />
+
+    <fragment
+        android:id="@+id/nav_addpledge"
+        android:name="com.notaryapp.ui.fragments.DashBoard_NotaryPledgeFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_dashboard_notary_pledge" />
+
+    <fragment
+        android:id="@+id/nav_validateprofile"
+        android:name="com.notaryapp.ui.fragments.DashBoard_ProfileFragment"
+        android:label="Validate Profile"
+        tools:layout="@layout/fragment_dashborad_profile1" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.notaryapp.ui.fragments.DashBoard_AddStamp"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_send" />
+</navigation>

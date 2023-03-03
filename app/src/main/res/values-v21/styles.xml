@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="notaryappCheckbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">#ffffff</item>
+        <item name="android:colorControlActivated">#f98e3e</item>
+        <item name="android:colorControlHighlight">#f98e3e</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+    </style>
+
+
+    <style name="notaryappCheckboxLicense" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">#000000</item>
+        <item name="android:colorControlActivated">#f98e3e</item>
+        <item name="android:colorControlHighlight">#f98e3e</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+    </style>
+</resources>

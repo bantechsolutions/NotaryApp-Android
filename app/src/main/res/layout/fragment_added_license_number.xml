@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:fontFamily="@font/oswald_medium"
+            android:id="@+id/pageHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/license_page_head"
+            android:textColor="@color/white"
+            android:textSize="@dimen/headerText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            tools:ignore="SpUsage"
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+
+            android:text="@string/license_page_sub"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normalText"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pageHeader" />
+
+
+        <Button
+            android:id="@+id/btn_addlice_close"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginEnd="@dimen/btnCloseEnd"
+            android:background="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:textSize="@dimen/mainText"
+                    android:id="@+id/textAdded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="@string/notary_commission_s"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintBottom_toTopOf="@id/licenseNumber"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/licenseNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/headTextMargin"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/your_license_number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/normalText"
+                    app:layout_constraintBottom_toTopOf="@id/list_comm"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textAdded" />
+
+                <!--<TextView
+                    android:textSize="@dimen/normalText"
+                    android:id="@+id/stateName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="DEMO "
+                    android:textColor="@color/colorBlack"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintBottom_toTopOf="@+id/btnAddAnother"
+                    app:layout_constraintStart_toStartOf="@+id/licenseNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/licenseNumber" />
+
+                <TextView
+                    android:textSize="@dimen/normalText"
+                    android:id="@+id/LicenseNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="DEMO"
+                    android:textColor="@color/colorBlack"
+                    tools:ignore="SpUsage"
+                    app:layout_constraintBottom_toTopOf="@+id/btnAddAnother"
+                    app:layout_constraintStart_toEndOf="@+id/stateName"
+                    app:layout_constraintTop_toBottomOf="@+id/licenseNumber" />-->
+
+                <ListView
+                    android:id="@+id/list_comm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/licenseNumber"
+                    app:layout_constraintBottom_toTopOf="@id/btnAddAnother"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:divider="@android:color/transparent"/>
+
+                <Button
+                    android:id="@+id/btnAddAnother"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="0dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@drawable/button_style_primary"
+                    android:clickable="true"
+                    android:text="@string/add_another_commission_number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/buttonText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/list_comm" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topGuideline"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:textSize="@dimen/mainText"
+                android:id="@+id/textAdded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_medium"
+                android:text="@string/notary_commission_s"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintBottom_toTopOf="@id/licenseNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                tools:ignore="SpUsage"
+                android:id="@+id/licenseNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/headTextMargin"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/your_license_number"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/normalText"
+                app:layout_constraintBottom_toTopOf="@id/list_comm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textAdded" />
+
+            &lt;!&ndash;<TextView
+                android:textSize="@dimen/normalText"
+                android:id="@+id/stateName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/oswald_medium"
+                android:text="DEMO "
+                android:textColor="@color/colorBlack"
+                tools:ignore="SpUsage"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddAnother"
+                app:layout_constraintStart_toStartOf="@+id/licenseNumber"
+                app:layout_constraintTop_toBottomOf="@+id/licenseNumber" />
+
+            <TextView
+                android:textSize="@dimen/normalText"
+                android:id="@+id/LicenseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/oswald_medium"
+                android:text="DEMO"
+                android:textColor="@color/colorBlack"
+                tools:ignore="SpUsage"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddAnother"
+                app:layout_constraintStart_toEndOf="@+id/stateName"
+                app:layout_constraintTop_toBottomOf="@+id/licenseNumber" />&ndash;&gt;
+
+            <ListView
+                android:id="@+id/list_comm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/licenseNumber"
+                app:layout_constraintBottom_toTopOf="@id/btnAddAnother"
+                app:layout_constraintStart_toStartOf="parent"
+                android:divider="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/btnAddAnother"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:background="@drawable/button_style_primary"
+                android:clickable="true"
+                android:text="@string/add_another_commission_number"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/list_comm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utils.CustomDialog">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dialogue_trans"
+            android:gravity="center">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                app:cardCornerRadius="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_bg_dash">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/head"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/alert_head_box"
+                        android:padding="20dp"
+                        app:layout_constraintBottom_toTopOf="@id/bottomBox"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textHead"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/oswald_medium"
+                            android:gravity="center"
+                            android:text="Alert !"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/headerText"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btn_close"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/round_white_close"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottomBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/head">
+
+                        <TextView
+                            android:id="@+id/alertMess"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:text="@string/default_seal_alert"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/normalText"
+                            app:layout_constraintBottom_toTopOf="@+id/btnOk"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sealImage"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:src="@drawable/ic_demo_stamp"
+                            android:text="@string/alert"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/normalText"
+                            app:layout_constraintBottom_toTopOf="@+id/btnOk"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpUsage" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <Button
+                                    android:id="@+id/btnCancel"
+                                    android:layout_width="90dp"
+                                    android:layout_height="@dimen/buttonHeight"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="@drawable/button_style_primary"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:padding="5dp"
+                                    android:text="CANCEL"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/buttonText"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/alertMess" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <Button
+                                    android:id="@+id/btnOk"
+                                    android:layout_width="90dp"
+                                    android:layout_height="@dimen/buttonHeight"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="@drawable/button_style_primary"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:padding="5dp"
+                                    android:text="OK"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/buttonText"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/alertMess" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

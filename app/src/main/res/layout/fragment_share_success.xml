@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+
+android:background="@drawable/background"
+tools:context=".ui.fragments.verifyauthenticate.adddoc.ShareSuccessFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <TextView
+        android:textSize="@dimen/mainText"
+        android:id="@+id/contactDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/oswald_medium"
+        android:gravity="center"
+        android:text="@string/documents_shared"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/contactDetail2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/the_document_have_been_shared_with_the_selected_recipients"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normalText"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoadDash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+    </TextView>
+
+    <Button
+    android:id="@+id/btncallSupport"
+    android:layout_width="200dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="31dp"
+    android:background="@drawable/button_style_primary"
+    android:clickable="true"
+    android:text="@string/menu_share"
+    android:textAllCaps="true"
+    android:visibility="gone"
+        android:textColor="#fff"
+        android:textSize="@dimen/normalText"
+        app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+</Button>
+
+<LinearLayout
+    android:background="@drawable/footer_btn_bg"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center"
+    android:visibility="gone"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+</LinearLayout>
+
+    <Button
+        android:id="@+id/btnLoadDash"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:background="@drawable/button_style_primary"
+        android:clickable="true"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+        android:text="RETURN TO DASHBOARD"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="@dimen/buttonText"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </Button>
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_tik"
+        app:layout_constraintBottom_toTopOf="@+id/contactDetail2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactDetail" />
+
+    <RelativeLayout
+    android:id="@+id/regRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_layout_ht"
+    android:background="@drawable/footer_btn_bg"
+    android:gravity="bottom|center"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="130dp"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_style_primary"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="@dimen/buttonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </Button>
+
+</RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

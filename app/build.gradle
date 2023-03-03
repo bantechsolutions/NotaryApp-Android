@@ -1,0 +1,225 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+android {
+    compileSdkVersion 32
+    buildToolsVersion "29.0.3"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.notaryapp"
+        minSdkVersion 24
+        targetSdkVersion 32
+        versionCode 54
+        versionName "1.42"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        buildConfigField "String", "google_youtube_api_key", "\"PLACE_YOUR_MAPS_KEY\""
+
+    }
+
+
+    signingConfigs {
+        release {
+            storeFile file('./keystore')
+            storePassword 'notaryapp'
+            keyAlias 'notaryapp'
+            keyPassword 'notaryapp'
+        }
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+            resValue "string", "google_maps_api_key", "PLACE_YOUR_MAPS_KEY"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    aaptOptions {
+        cruncherEnabled = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    packagingOptions {
+        pickFirst 'lib/x86_64/libopencv_java3.so'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'mips', 'mips64', 'arm64-v8a'
+//            universalApk false
+//        }
+//    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'kotlin-parcelize'
+
+repositories {
+    google()
+    //maven { url "https://dl.bintray.com/onfido/maven" }
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'https://mobile-sdk.jumio.com' }
+    mavenCentral() {
+        content {
+            includeModule("com.theartofdev.edmodo", "android-image-cropper")
+        }
+    }
+}
+ext {
+    versions = [
+            'javacv': '1.4.2',
+    ]
+    // 3.5.0
+    // 3.7.1
+    //3.8.0
+    SDK_VERSION = "3.9.2"
+    kotlin_version = "1.4.30"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation project(path: ':documentscanner')
+    implementation project(path: ':documentscanner')
+    implementation project(path: ':documentscanner')
+    implementation 'androidx.wear:wear:1.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // Room (use 1.1.0-alpha2 for latest alpha)
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
+
+//VOLLEY Networking API CALL
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Ripple effect fot dashboard
+    implementation 'pl.bclogic:pulsator4droid:1.0.3'
+
+    //Progressbar animation
+    implementation 'br.com.simplepass:loading-button-android:1.6.5'
+//Strip
+    //implementation 'com.stripe:stripe-android:16.10.0'
+    implementation 'com.stripe:stripe-android:20.13.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    //implementation "com.stripe:stripeterminal:2.13.0"
+
+
+    implementation "com.jumio.android:core:${SDK_VERSION}@aar"
+    //implementation "com.jumio.android:core:4.2.0@aar"
+    //implementation "com.jumio.android:auth:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:auth:3.9.1@aar"
+    implementation "com.jumio.android:nv:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-mrz:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-ocr:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-barcode:${SDK_VERSION}@aar"
+    //implementation "com.jumio.android:face:${SDK_VERSION}@aar"
+    //only for face
+    //implementation "com.facetec:zoom-authentication:8.0.11@aar"
+    implementation "com.facetec:zoom-authentication:8.12.1@aar"
+
+   /* implementation "com.jumio.android:core:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:bam:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-mrz:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-nfc:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-ocr:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-barcode:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-barcode-vision:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:iproov:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:dv:${SDK_VERSION}@aar"*/
+
+    //for core:
+    //noinspection GradleDependency
+    implementation "androidx.appcompat:appcompat:1.4.0"
+    implementation "androidx.room:room-runtime:2.4.2"
+
+    //for nv:
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0"
+
+
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+    //noinspection GradleDynamicVersion
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    /* Needed for RxAndroid */
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+
+    /* Used to make Retrofit easier and GSON & Rx-compatible*/
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.3'
+
+    implementation 'com.google.android.gms:play-services-maps:18.0.0'
+    implementation 'com.google.android.libraries.places:places:2.5.0'
+
+    implementation 'com.google.android.play:core:1.10.3'
+    //implementation project(':scanlibrary')
+
+    implementation 'com.marshalchen.ultimaterecyclerview:library:0.4.0'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+
+    //implementation project(':documentscanner')
+    //implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    //implementation 'com.github.mayuce:AndroidDocumentScanner:1.5.2'
+    //implementation 'com.github.liltof:AndroidScannerDemo:3.2'
+
+
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.4.0'
+
+    implementation 'com.google.firebase:firebase-core:20.0.0'
+    // Firebase Messaging library for sending push notifications. Add this line.
+    implementation 'com.google.firebase:firebase-messaging:17.3.3'
+    // PubNub Android SDK. Add this line.
+    implementation group: 'com.pubnub', name: 'pubnub-gson', version: '4.20.0'
+    compileOnly 'com.google.android.wearable:wearable:2.8.1'
+
+    //Biometric
+    implementation "androidx.biometric:biometric:1.1.0"
+
+    implementation "androidx.security:security-crypto:1.0.0"
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+    implementation "com.google.android.material:material:1.6.0"
+
+}

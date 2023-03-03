@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.onboarding.VerifiedActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+android:fontFamily="@font/oswald_medium"
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:text=""
+            tools:ignore="SpUsage"
+            android:textColor="@color/white"
+            android:textSize="@dimen/headerText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.notaryapp.components.ScrollViewExt
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuideline">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/mainContainer"
+                android:layout_margin="30dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardOne"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/cardTwo">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+                        <TextView
+                            android:textSize="@dimen/mainText"
+                            android:id="@+id/verified"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/oswald_medium"
+                            android:gravity="center"
+                            android:text="Verified"
+                            android:textColor="@color/colorBlack"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/tick"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/ic_tikwitness"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/verified"/>
+                        <TextView
+                            android:id="@+id/congrats_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/congrats_text"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/normalText"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toTopOf="@+id/free_trial_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tick"
+                            tools:text="@string/congrats_text" />
+                        <TextView
+                            android:textSize="@dimen/normalText"
+                            android:id="@+id/free_trial_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_goneMarginTop="@dimen/subTextMargin"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/subTextMargin"
+                            android:text="@string/days_trial"
+                            android:textColor="@color/colorGrey"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/congrats_text" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardOne">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/success_msg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:text="@string/success_msg"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="@dimen/normalText"
+                            app:layout_constraintBottom_toTopOf="@+id/profile_id"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="@string/success_msg" />
+                        <TextView
+                            android:id="@+id/profile_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:textColor="@color/textLight"
+                            android:textSize="@dimen/normalText"
+                            app:layout_constraintBottom_toTopOf="@+id/txtClam_ur_profile"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/success_msg"
+                            tools:text="@string/profile_id" />
+
+                        <TextView
+                            android:layout_height="@dimen/buttonHeight"
+                            android:textSize="@dimen/buttonText"
+                            android:id="@+id/txtClam_ur_profile"
+                            android:layout_width="0dp"
+                            android:background="@drawable/button_style_secondary"
+                            android:text="@string/claim_your_profile"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/roboto_regular"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/profile_id" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </com.notaryapp.components.ScrollViewExt>
+
+
+    <!--    <TextView
+    tools:ignore="SpUsage"-->
+<!--        android:id="@+id/verifiedHead"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginRight="16dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:fontFamily="@font/roboto_bold"-->
+<!--        android:gravity="center_horizontal"-->
+    <!--        -->
+<!--        android:text=""-->
+<!--        android:visibility="gone"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="26.7sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/footer_transparent"
+        android:id="@+id/footerbtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:alpha="80"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomGuideline">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+            android:background="@drawable/button_style_primary"
+            android:text="@string/login"
+            android:textSize="@dimen/buttonText"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

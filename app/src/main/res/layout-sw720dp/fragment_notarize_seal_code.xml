@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background"
+    tools:context=".ui.fragments.verifyauthenticate.addseal.Notarize_SealCodeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_layout_ht"
+            android:background="@drawable/footer_transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container">
+
+
+            <Button
+                android:id="@+id/btnComplete"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeight"
+                android:background="@drawable/button_style_primary"
+                android:clickable="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/update"
+                android:textAlignment="gravity"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/buttonText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_pro_back"
+                android:layout_width="@dimen/btnCloseBackSize"
+                android:layout_height="@dimen/btnCloseBackSize"
+                android:layout_marginStart="@dimen/btnBackStart"
+                android:background="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:fontFamily="@font/oswald_medium"
+                android:id="@+id/head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" SIGN AND ADD YOUR SEAL(S)"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/headerText"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_pro_close"
+                app:layout_constraintStart_toEndOf="@+id/btn_pro_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/btn_pro_close"
+                android:layout_width="@dimen/btnCloseBackSize"
+                android:layout_height="@dimen/btnCloseBackSize"
+                android:layout_marginEnd="@dimen/btnCloseEnd"
+                android:background="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="80dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/rl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginStart="@dimen/full_screen_form_card_width"
+                    android:layout_marginEnd="@dimen/full_screen_form_card_width"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/textBox1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/white_bg_dash">
+
+                            <TextView
+                                android:textSize="@dimen/mainText"
+                                android:id="@+id/headText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/oswald_medium"
+                                android:text="@string/write_code"
+                                android:gravity="start"
+                                android:textColor="@color/black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/pins"/>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/pins"
+                                android:layout_width="0dp"
+                                android:layout_height="90dp"
+                                android:layout_marginTop="@dimen/headTextMargin"
+                                app:layout_constraintTop_toBottomOf="@id/headText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/titleText">
+
+                                <TextView
+                                    android:textSize="@dimen/mainText"
+                                    android:textStyle="bold"
+                                    android:id="@+id/pin1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/edit_text_verify_style"
+                                    android:gravity="center"
+                                    android:maxLength="1"
+                                    android:text=""
+                                    android:padding="5dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:fontFamily="@font/roboto_mono_bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/pin2"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:textSize="@dimen/mainText"
+                                    android:textStyle="bold"
+                                    android:id="@+id/pin2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/edit_text_verify_style"
+                                    android:gravity="center"
+                                    android:maxLength="1"
+                                    android:padding="5dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:fontFamily="@font/roboto_mono_bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/pin3"
+                                    app:layout_constraintStart_toEndOf="@+id/pin1"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:textSize="@dimen/mainText"
+                                    android:textStyle="bold"
+                                    android:id="@+id/pin3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/edit_text_verify_style"
+                                    android:gravity="center"
+                                    android:maxLength="1"
+                                    android:padding="5dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:fontFamily="@font/roboto_mono_bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/pin4"
+                                    app:layout_constraintStart_toEndOf="@+id/pin2"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:textSize="@dimen/mainText"
+                                    android:textStyle="bold"
+                                    android:id="@+id/pin4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/edit_text_verify_style"
+                                    android:gravity="center"
+                                    android:maxLength="1"
+                                    android:padding="5dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:fontFamily="@font/roboto_mono_bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/pin5"
+                                    app:layout_constraintStart_toEndOf="@+id/pin3"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:importantForAutofill="no" />
+
+                                <TextView
+                                    android:textSize="@dimen/mainText"
+                                    android:textStyle="bold"
+                                    android:id="@+id/pin5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/edit_text_verify_style"
+                                    android:gravity="center"
+                                    android:maxLength="1"
+                                    android:padding="5dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:fontFamily="@font/roboto_mono_bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/pin6"
+                                    app:layout_constraintStart_toEndOf="@+id/pin4"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:importantForAutofill="no" />
+
+                                <TextView
+                                    android:textSize="@dimen/mainText"
+                                    android:textStyle="bold"
+                                    android:id="@+id/pin6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/edit_text_verify_style"
+                                    android:gravity="center"
+                                    android:maxLength="1"
+                                    android:padding="5dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:fontFamily="@font/roboto_mono_bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/pin7"
+                                    app:layout_constraintStart_toEndOf="@+id/pin5"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:importantForAutofill="no" />
+
+                                <TextView
+                                    android:textSize="@dimen/mainText"
+                                    android:textStyle="bold"
+                                    android:id="@+id/pin7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/edit_text_verify_style"
+                                    android:gravity="center"
+                                    android:maxLength="1"
+                                    android:padding="5dp"
+                                    android:fontFamily="@font/roboto_mono_bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/pin6"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:importantForAutofill="no" />
+
+                                <androidx.constraintlayout.widget.Group
+                                    android:id="@+id/group"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/titleText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Please ensure:"
+                                android:gravity="start"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="@dimen/normalText"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/pins"
+                                app:layout_constraintBottom_toTopOf="@id/text1"/>
+
+                            <TextView
+                                android:textSize="@dimen/normalText"
+                                android:id="@+id/text1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="start"
+                                android:layout_marginTop="@dimen/subTextMargin"
+                                android:text="@string/add_seal_code_info"
+                                android:textAlignment="gravity"
+                                android:textColor="@color/colorGrey"
+                                app:layout_constraintTop_toBottomOf="@id/titleText"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/video_bg">
+
+                        <ImageView
+                            android:id="@+id/videoImage"
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:visibility="visible"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/videoprev"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_playvideo"
+                            android:visibility="visible"
+                            android:foregroundGravity="center"
+                            app:layout_constraintStart_toStartOf="@id/videoImage"
+                            app:layout_constraintEnd_toEndOf="@id/videoImage"
+                            app:layout_constraintTop_toTopOf="@id/videoImage"
+                            app:layout_constraintBottom_toBottomOf="@id/videoImage"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--                <VideoView-->
+                    <!--                    android:id="@+id/sealVideo"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="200dp"-->
+                    <!--                    android:layout_marginTop="10dp"-->
+                    <!--                    android:layout_marginBottom="40dp"-->
+                    <!--                    android:contentDescription="@string/app_name"-->
+                    <!--                    android:src="@drawable/background_shade" />-->
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

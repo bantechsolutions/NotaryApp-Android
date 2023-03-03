@@ -1,0 +1,17 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom Toast"
+        android:gravity="center"
+        android:id="@+id/custom_toast_text"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>

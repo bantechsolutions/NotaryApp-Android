@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/box"
+    android:layout_width="130dp"
+    android:layout_height="125dp"
+    app:cardElevation="2dp"
+    android:orientation="vertical"
+    android:layout_marginBottom="15dp"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/docView"
+        android:layout_width="130dp"
+        android:layout_height="125dp"
+        android:background="@drawable/white_bg_bordered"
+        android:layout_gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/plusBox"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/round_orange"
+            android:visibility="invisible"
+            android:padding="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/itemTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemImageContainer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/round_img_steps"
+            android:padding="3dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/itemTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/itemImageProgress"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:indeterminateDrawable="@drawable/progress_indeterminate"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/itemImage"
+                android:layout_width="66dp"
+                android:layout_height="64dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:textSize="@dimen/extraSmallText"
+            android:id="@+id/count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/round_blue"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            tools:ignore="SpUsage"
+            android:text="1"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/itemImageContainer"
+            app:layout_constraintTop_toTopOf="@+id/itemImageContainer"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/itemTitle"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/roboto_regular"
+            android:letterSpacing=".05"
+            android:text="Add Document"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlueText"
+            android:textSize="@dimen/smallText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemImageContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

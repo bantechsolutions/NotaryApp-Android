@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F98E3E</color>
+    <color name="colorPrimaryDark">#F98E3E</color>
+    <color name="colorAccent">#F98E3E</color>
+    <color name="colorTransparent">#00F98E3E</color>
+    <color name="colorSecondary">#fe5b67</color>
+    <color name="headingBold">#282828</color>
+    <color name="textLight">#b1c8f2</color>
+    <color name="colorMiddle">#f97947</color>
+    <color name="topLayoutBg">#77000000</color>
+    <color name="textCyan">#ccac8282</color>
+    <color name="paleGray">#e2e9f1</color>
+    <color name="colorBlack">#282828</color>
+    <color name="colorGrey">#808080</color>
+    <color name="colorLink">#3F51B5</color>
+
+    <color name="colorSubtleLightGray">#e9e9e9</color>
+    <color name="colorLightBlue">#3B055CA1</color>
+    <color name="colorThickBlue">#282828</color>
+
+    <color name="colorTextGray">#dc717280</color>
+    <color name="colorBlur">#E2000000</color>
+    <color name="colorDrawerSubBg">#e2e9f1</color>
+    <color name="colorDrawerSubText">#1d3769</color>
+    <color name="textblue">#282828</color>
+    <color name="colorBrightOrange">#ff6200</color>
+    <color name="colorOrangeYellow">#ffa700</color>
+    <color name="white">#ffffff</color>
+    <color name="colorHintGray">#769b9b9b</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorRect">#f6f6f6</color>
+    <color name="dialogue_trans">#99000000</color>
+    <color name="darkBlueText">#282828</color>
+
+    <color name="user_input_color">#15519b</color>
+    <color name="textInputHint">#769b9b9b</color>
+    <color name="unfocused_color">#FFF3F3F3</color>
+<!--    <color name="red">#15519b</color>-->
+
+    <color name="onfidoColorPrimary">#194B6A</color>
+    <color name="onfidoColorPrimaryDark">#194B6A</color>
+    <color name="onfidoPrimaryButtonColor">#F98E3E</color>
+    <color name="onfidoPrimaryButtonColorPressed">#F98E78</color>
+    <color name="onfidoTextColorPrimary">#ffffff</color>
+    <color name="onfidoPrimaryButtonTextColor">#ffffff</color>
+    <color name="paleGrey">#e2e9f1</color>
+    <color name="black_trans">#95000000</color>
+    <color name="skyBlue">#5ab7ff</color>
+
+    <color name="white_trans">#85ffffff</color>
+
+    <color name="veri_trans">#95ffffff</color>
+
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="item_name">#0c0c0c</color>
+    <color name="description">#1a1a1a</color>
+    <color name="chef">#777</color>
+    <color name="timestamp">#777</color>
+
+    <color name="yellow">#ffff00</color>
+    <color name="colorLightGrey">#b1b1b1</color>
+
+    <color name="warningState">#E44D5D</color>
+    <color name="warningLicense">#CC4754</color>
+    <color name="okState">#266EC1</color>
+    <color name="okLicense">#000000</color>
+    <color name="errorStateLicense">#B2B2B2</color>
+    <color name="missingStateLicense">#FFA700</color>
+    <color name="journal_fees">#24c292</color>
+
+</resources>

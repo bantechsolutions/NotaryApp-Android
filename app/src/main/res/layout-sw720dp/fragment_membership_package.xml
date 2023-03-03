@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/topGuideline">
+
+        <Button
+            android:id="@+id/btn_pro_close2"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginEnd="@dimen/btnCloseEnd"
+            android:background="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:fontFamily="@font/oswald_medium"
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="MEMBERSHIP PLANS"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/headerText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/full_screen_form_card_width"
+        app:layout_constraintBottom_toTopOf="@+id/bottomGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topGuideline">
+
+        <!--<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_margin="30dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/upgradeBtn">
+
+                            <ImageView
+                                android:id="@+id/imageView16"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/crown_gold"
+                                app:layout_constraintBottom_toTopOf="@+id/planName"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                            <TextView
+                                android:textSize="@dimen/mainText"
+                                android:id="@+id/planName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:lineHeight="40dp"
+                                android:text="Notary-App\nPackage"
+                                android:layout_marginTop="@dimen/subTextMargin"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toTopOf="@+id/textView10"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/subTextMargin"
+                                android:fontFamily="@font/oswald_medium"
+                                android:gravity="center"
+                                android:letterSpacing=".05"
+                                android:text="Complete Identity Protection Package"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/normalText"
+                                app:layout_constraintBottom_toTopOf="@+id/planDesc"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/planName" />
+
+                            <TextView
+                                android:id="@+id/planDesc"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/subTextMargin"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:text="@string/recurring_monthly_charge"
+                                android:textColor="@color/colorTextGray"
+                                android:textSize="@dimen/normalText"
+                                app:layout_constraintBottom_toTopOf="@+id/dprice"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                            <TextView
+                                android:id="@+id/dprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:layout_marginTop="@dimen/subTextMargin"
+                                android:gravity="center"
+                                android:text="$5.99"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorOrangeYellow"
+                                android:textSize="@dimen/mem_price"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/planDesc" />
+                            <View
+                                app:layout_constraintEnd_toEndOf="@+id/dprice"
+                                app:layout_constraintStart_toStartOf="@+id/dprice"
+                                app:layout_constraintBottom_toBottomOf="@+id/dprice"
+                                app:layout_constraintTop_toTopOf="@+id/dprice"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:background="@color/colorOrangeYellow"/>
+                            <TextView
+                                android:textSize="@dimen/mainText"
+                                android:id="@+id/txtPrice"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:layout_marginTop="@dimen/subTextMargin"
+                                android:gravity="center"
+                                android:text="$3.99"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBrightOrange"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/dprice" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <Button
+                            android:id="@+id/upgradeBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/buttonHeight"
+                            android:background="@drawable/button_style_primary"
+                            android:text="@string/get_now"
+                            android:layout_margin="@dimen/headTextMargin"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/buttonText"
+                            app:layout_constraintTop_toBottomOf="@id/constraintLayout7"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+
+        </ScrollView>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

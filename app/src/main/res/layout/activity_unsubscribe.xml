@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacground_second"
+    tools:context=".ui.activities.unsubscribe.UnsubscribeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/btn_pro_back"
+            android:layout_width="@dimen/btnCloseBackSize"
+            android:layout_height="@dimen/btnCloseBackSize"
+            android:layout_marginStart="@dimen/btnBackStart"
+            android:background="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:fontFamily="@font/oswald_medium"
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/headerText"
+            android:gravity="center_horizontal"
+            android:text="@string/unsubscribe"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp">
+
+                    <TextView
+                        android:id="@+id/accessHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:text="@string/unsubscribe"
+                        android:textColor="@color/darkBlueText"
+                        android:textSize="@dimen/mainText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/accessText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start"
+                        android:text="@string/sorry_to_see_you_go"
+                        android:textColor="@color/textblue"
+                        android:textSize="@dimen/subHeadingText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/accessHead" />
+
+
+                    <ImageView
+                        android:id="@+id/ic_one"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="30dp"
+                        android:alpha="0.5"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_tik_redbg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/accessText" />
+
+                    <TextView
+                        android:id="@+id/pointOneTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start"
+                        android:text="@string/if_you_unsubscribe"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normalText"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="@+id/ic_one"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ic_one"
+                        app:layout_constraintTop_toTopOf="@+id/ic_one" />
+
+
+                    <ImageView
+                        android:id="@+id/ic_two"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="25dp"
+                        android:alpha="0.5"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_tik_redbg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pointOneTV" />
+
+                    <TextView
+                        android:id="@+id/pointTwoTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="22dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start"
+                        android:text="@string/you_account_and_data_with"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normalText"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ic_two"
+                        app:layout_constraintTop_toBottomOf="@+id/pointOneTV" />
+
+                    <ImageView
+                        android:id="@+id/ic_three"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="25dp"
+                        android:alpha="0.5"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_tik_redbg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pointTwoTV" />
+
+                    <TextView
+                        android:id="@+id/pointThreeTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="22dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start"
+                        android:text="@string/you_would_not_have_access"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normalText"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ic_three"
+                        app:layout_constraintTop_toBottomOf="@+id/pointTwoTV" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnUnsub"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintWidth_max="@dimen/full_screen_card_width"
+        android:background="@drawable/white_bg_dash"
+        android:clickable="true"
+        android:text="@string/unsubscribe"
+        android:textAllCaps="true"
+        android:textColor="#e26969"
+        android:textSize="@dimen/buttonText"
+        app:layout_constraintTop_toBottomOf="@id/scroll_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="80dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
